@@ -18,3 +18,5 @@
 - Token grabber from Discord Canary, Better Discord, Discord on browsers and Discord application | 💻
 
 - And have injection | 🔒
+
+![6bm5pku](https://github.com/blxstealer/BLX-Stealer/assets/71230025/b3d84a8e-6d17-461f-b6ad-f25b1044538d)
