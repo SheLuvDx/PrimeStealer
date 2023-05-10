@@ -24,7 +24,7 @@
 
 
 
-     HOW TO SETUP
+       HOW TO SETUP
      
 - First open `install.bat` for installing library.
 - Secondly open `builder.bat`
