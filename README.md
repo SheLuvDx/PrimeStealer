@@ -1,6 +1,6 @@
 # BLX Stealer
 
-![53hwkss](https://github.com/blxstealer/BLX-Stealer/assets/71230025/b4d866c7-ca23-4b66-9142-c13beb0049b1)
+![Picsart_23-05-10_18-25-19-907](https://github.com/blxstealer/BLX-Stealer/assets/71230025/b5113895-17c0-4f44-a1d0-18ab2ee5a53b)
 
 
 - Startup | 🖥️
