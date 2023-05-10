@@ -4,21 +4,21 @@
 
       FEATURES
 
-- Startup | 🖥️
+- Startup   |   🖥️
 
-- All browser cookies | 🍪
+- All browser cookies   |   🍪
 
-- All browser passwords | 📄
+- All browser passwords   |   📄
 
-- Special files | 📂
+- Special files   |   📂
 
-- Steam, Riot and Telegram accounts | 🎮
+- Steam, Riot and Telegram accounts   |   🎮
 
-- Metamask, Phantom, Binance, Coinbase, Exodus, Atomic and Trust wallets | 💵
+- Metamask, Phantom, Binance, Coinbase, Exodus, Atomic and Trust wallets   |   💵
 
-- Token grabber from Discord Canary, Better Discord, Discord on browsers and Discord application | 💻
+- Token grabber from Discord Canary, Better Discord, Discord on browsers and Discord application   |   💻
 
-- And have injection | 🔒
+- And have injection   |   🔒
 
 <img style="border-radius: 15px; display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="60%" src='https://cdn.discordapp.com/attachments/1077055672899870770/1105898587566649344/Picsart_23-04-23_18-14-23-651.png'></img> 
 
