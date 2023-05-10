@@ -2,7 +2,7 @@
 
 ![Picsart_23-05-10_18-25-19-907](https://github.com/blxstealer/BLX-Stealer/assets/71230025/b5113895-17c0-4f44-a1d0-18ab2ee5a53b)
 
-                                                        FEATURES
+      FEATURES
 
 - Startup | 🖥️
 
@@ -21,3 +21,10 @@
 - And have injection | 🔒
 
 ![6bm5pku](https://github.com/blxstealer/BLX-Stealer/assets/71230025/b3d84a8e-6d17-461f-b6ad-f25b1044538d)
+
+     HOW TO SETUP
+     
+- First open `install.bat` for installing library.
+- Secondly open `buildier.bat`
+
+<img style="border-radius: 15px; display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="60%" src='https://www.hizliresim.com/53hwkss'></img> 
