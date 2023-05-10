@@ -22,7 +22,7 @@
 
 - Have injection   |   🔒
 
-<img style="border-radius: 15px; display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="60%" src='https://cdn.discordapp.com/attachments/1077055672899870770/1105898587566649344/Picsart_23-04-23_18-14-23-651.png'></img> 
+
 
      HOW TO SETUP
      
