@@ -27,4 +27,4 @@
 - First open `install.bat` for installing library.
 - Secondly open `buildier.bat`
 
-<img style="border-radius: 15px; display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="60%" src='[https://www.hizliresim.com/53hwkss](https://cdn.discordapp.com/attachments/1077055672899870770/1105897715453403237/Picsart_23-05-10_18-07-25-875.png)'></img> 
+<img style="border-radius: 15px; display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="60%" src='https://www.hizliresim.com/53hwkss](https://cdn.discordapp.com/attachments/1077055672899870770/1105897715453403237/Picsart_23-05-10_18-07-25-875.png'></img> 
