@@ -35,3 +35,6 @@
 
 <img style="border-radius: 15px; display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="40%" src='https://cdn.discordapp.com/attachments/1077055672899870770/1106255398836633650/choose.png'></img> 
 
+- Enter your webhook and click enter. 
+
+<img style="border-radius: 15px; display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="40%" src='https://cdn.discordapp.com/attachments/1077055672899870770/1106262806111723661/enter.png'></img> 
