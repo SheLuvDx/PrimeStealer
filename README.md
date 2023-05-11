@@ -26,7 +26,7 @@
 
        HOW TO SETUP
      
-- First open `install.bat` for installing library.
+- First open `install.bat` for installing requirements.
 - Secondly open `builder.bat`
 
 <img style="border-radius: 15px; display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="60%" src='https://cdn.discordapp.com/attachments/1077055672899870770/1105897715453403237/Picsart_23-05-10_18-07-25-875.png'></img> 
