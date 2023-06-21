@@ -8,3 +8,6 @@ pyinstaller
 wmi
 fade
 ctypes
+psutil
+getmac
+OpenSSL
