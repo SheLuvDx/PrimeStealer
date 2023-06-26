@@ -10,4 +10,5 @@ fade
 ctypes
 psutil
 getmac
+get-mac
 OpenSSL
