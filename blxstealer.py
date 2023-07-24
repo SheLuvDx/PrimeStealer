@@ -16,7 +16,6 @@ import threading
 from sys import executable
 from sqlite3 import connect as sql_connect
 import re
-import random ,base64,codecs,zlib;pyobfuscate=""
 from base64 import b64decode
 from json import loads as json_loads, load
 from ctypes import windll, wintypes, byref, cdll, Structure, POINTER, c_char, c_buffer
