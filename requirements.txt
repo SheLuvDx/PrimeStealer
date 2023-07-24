@@ -1,3 +1,4 @@
+pyOpenSSL
 requests
 Crypto.Cipher
 pycryptodome
