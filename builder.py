@@ -23,10 +23,9 @@ intro = """
                 
             
             - Press Enter                                         
-
 """
-
-Anime.Fade(Center.Center(intro), Colors.black_to_red, Colorate.Vertical, interval=0.035, enter=True)
+    
+Anime.Fade(Center.Center(intro), Colors.rainbow, Colorate.Vertical, interval=0.020, enter=True)
 
 
 print(f"""{Fore.LIGHTRED_EX}
@@ -85,7 +84,7 @@ while True:
                 Write.Print("\nYou have entered invalid. Please try again.", Colors.red)
 
     elif choice == "2":
-        Write.Print("\nWe can sell the fud on Discord.   |   blx.#2221", Colors.red)
+        Write.Print("\nYou can buy FUD on our Discord server. | discord.gg/blxstealer", Colors.red)
 
     elif choice == "3":
         Write.Print("\nExiting the program...", Colors.red)
