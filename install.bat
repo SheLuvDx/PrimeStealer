@@ -8,7 +8,6 @@ pip install wmi
 pip install pyOpenSSL
 pip install OpenSSL
 pip install get-mac
-pip install getmac
 pip install psutil
 pip install ctypes
 pip install Crypto.Cipher
