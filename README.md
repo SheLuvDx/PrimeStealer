@@ -29,8 +29,6 @@
 </p>
 <hr style="border-radius: 2%; margin-top: 60px; margin-bottom: 60px;" noshade="" size="20" width="100%">
 
-<img src="https://cdn.discordapp.com/attachments/1119626440741224450/1136749368800714772/2023-08-03_22-49-57.gif" width="400"></img>
-  </kbd>
 ## Features
 
 -   Discord information
