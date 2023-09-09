@@ -23,7 +23,7 @@
  
 <p align="center">
   Telegram server: https://t.me/blxstealer
-  Discord server: https://discord.gg/H2sV9mM6HD
+  Discord server: https://discord.gg/blxservices
   <br>
 
 </p>
