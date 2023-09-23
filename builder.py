@@ -84,7 +84,7 @@ while True:
                 Write.Print("\nYou have entered invalid. Please try again.", Colors.red)
 
     elif choice == "2":
-        Write.Print("\nYou can buy FUD on our Discord server. | discord.gg/blxstealer", Colors.red)
+        Write.Print("\nYou can buy FUD on our Discord server. | discord.gg/blx", Colors.red)
 
     elif choice == "3":
         Write.Print("\nExiting the program...", Colors.red)
