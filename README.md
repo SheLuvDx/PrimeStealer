@@ -1,6 +1,3 @@
-<h1 align="center">
-  </h1>
-  
   <div align="center">
   <div>
     <img  src="img/image1.png">
