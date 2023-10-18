@@ -64,7 +64,7 @@
 
 ## Compatibility
 
-| Browsers           | Cookies and token grabber 🔍 | Password stealer 💥 | 
+| Browsers           | Cookies and Token Grabber | Password Stealer | 
 | :-----------:      | :-----------: | :-----------: |
 | Chrome             | ✅ | ✅ |
 | Edge               | ✅ | ✅ |
