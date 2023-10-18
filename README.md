@@ -71,8 +71,6 @@
 | Brave              | ✅ | ✅ |
 | Firefox            | ✅ | ✅ |
 | Opera (GX)         | ✅ | ✅ |
-| Vivaldi            | ✅ | ✅ |
-| Chromium navigator | ✅ | ✅ |
 | Yandex             | ✅ | ✅ |
 
 ## Install
