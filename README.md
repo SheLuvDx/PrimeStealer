@@ -62,6 +62,19 @@
     -   Place stub in appdata
     -   Add to startup registry
 
+## Compatibility
+
+| Browsers           | Cookies and token grabber 🔍 | Password stealer 💥 | 
+| :-----------:      | :-----------: | :-----------: |
+| Chrome             | ✅ | ✅ |
+| Edge               | ✅ | ✅ |
+| Brave              | ✅ | ✅ |
+| Firefox            | ✅ | ✅ |
+| Opera (GX)         | ✅ | ✅ |
+| Vivaldi            | ✅ | ✅ |
+| Chromium navigator | ✅ | ✅ |
+| Yandex             | ✅ | ✅ |
+
 ## Install
 
 ### Prerequisites
