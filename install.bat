@@ -12,3 +12,4 @@ pip install psutil
 pip install ctypes
 pip install Crypto.Cipher
 pip install fade
+pip install discord
