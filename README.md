@@ -35,28 +35,28 @@
     
 ## Features
 
--   Discord information
+-   Discord Information
     -   Nitro
     -   Badges
     -   Billing
     -   Email
     -   Phone
     -   HQ Friends
--   Browser data
+-   Browser Data
     -   Cookies
     -   Passwords
     -   Chrome, Edge, Brave, Opera GX, and many more... 
--   Crypto data
+-   Crypto Data
     -   Extensions (MetaMask, Phantom, Trust Wallet, Coinbase Wallet, Binance Wallet)
     -   Softwares (Exodus Wallet, Atomic Wallet)
     -   Seedphrases
--   Application data
+-   Application Data
     -   Steam
     -   Riot Games
     -   Telegram
--   Discord injection
+-   Discord Injection
     -   Send token, password, and email on login, credit card/paypal added, nitro bought or when password/mail is changed
--   System information
+-   System Information
     -   User
     -   System
     -   Disk
@@ -65,7 +65,7 @@
 
     -   Check if being run in a VirusTotal sandbox
 
--   Startup persistence
+-   Startup Persistence
     -   Place stub in appdata
     -   Add to startup registry
 
