@@ -30,8 +30,8 @@
 
 - What is the news?
     - New Machine Information! 
-    - Injection Fixed. - Added build customizable.exe to builder.
-    - Added build customizable.exe to builder.
+    - Injection Fixed.
+    - Added Customizable Stealer to Builder.
     
 ## Features
 
