@@ -26,6 +26,13 @@
 </p>
 <hr style="border-radius: 2%; margin-top: 60px; margin-bottom: 60px;" noshade="" size="20" width="100%">
 
+## UPDATED
+
+- What is the news?
+    - New Machine Information! 
+    - Injection Fixed. - Added build customizable.exe to builder.
+    - Added build customizable.exe to builder.
+    
 ## Features
 
 -   Discord information
