@@ -4,6 +4,7 @@ Crypto.Cipher
 pycryptodome
 pystyle
 colorama
+discord
 auto_py_to_exe
 psutil
 pyinstaller
