@@ -29,7 +29,8 @@
 ## UPDATED
 
 - What is the news?
-    - New Machine Information! 
+    - New Machine Information!
+    - New Roblox Information!
     - Injection Fixed.
     - Added Customizable Stealer to Builder.
     
@@ -71,14 +72,16 @@
 
 ## Compatibility
 
-| Browsers           | Cookies and Token Grabber | Password Stealer | 
-| :-----------:      | :-----------: | :-----------: |
-| Chrome             | ✅ | ✅ |
-| Edge               | ✅ | ✅ |
-| Brave              | ✅ | ✅ |
-| Firefox            | ✅ | ✅ |
-| Opera (GX)         | ✅ | ✅ |
-| Yandex             | ✅ | ✅ |
+| Browsers           | Cookies and Token Grabber | Password Stealer | Roblox Information
+| :-----------:      | :-----------: | :-----------: | :-----------: |
+| Chrome             | ✅ | ✅ | ✅ |
+| Edge               | ✅ | ✅ | ✅ |
+| Brave              | ✅ | ✅ | ✅ |
+| Firefox            | ✅ | ✅ | ✅ |
+| Opera (GX)         | ✅ | ✅ | ✅ |
+| Opera              | ✅ | ✅ | ✅ |
+| Yandex             | ✅ | ✅ | ✅ |
+| Chromium           | ❌ | ❌ | ✅ |
 
 ## Install
 
