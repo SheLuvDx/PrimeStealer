@@ -46,7 +46,8 @@
 -   Browser Data
     -   Cookies
     -   Passwords
-    -   Chrome, Edge, Brave, Opera GX, and many more... 
+    -   Roblox Information
+    -   From Chrome, Edge, Brave, Opera GX, and many more... 
 -   Crypto Data
     -   Extensions (MetaMask, Phantom, Trust Wallet, Coinbase Wallet, Binance Wallet)
     -   Softwares (Exodus Wallet, Atomic Wallet)
