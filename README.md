@@ -1,4 +1,4 @@
-https://github.com/SheLuvDx/PrimeStealer/assets/113944799/47d0226d-bd5b-483b-af9d-92b3e5381d93
+[https://github.com/SheLuvDx/PrimeStealer/assets/113944799/47d0226d-bd5b-483b-af9d-92b3e5381d93](https://github-production-user-asset-6210df.s3.amazonaws.com/113944799/280553110-47d0226d-bd5b-483b-af9d-92b3e5381d93.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20231105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231105T203320Z&X-Amz-Expires=300&X-Amz-Signature=1e44d0780bd6b262bf413b8d4aa25515d15e0b4f334c6f4d4c07eb93d303b9de&X-Amz-SignedHeaders=host&actor_id=113944799&key_id=0&repo_id=714792191)
 
 ## Features
 
