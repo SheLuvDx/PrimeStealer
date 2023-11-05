@@ -84,3 +84,9 @@ This tool is for educational purposes only. It is coded for you to see how your 
 
 ## License:
 By downloading this, you agree to the Commons Clause license and that you're not allowed to sell this repository or any code from this repository. For more info see https://commonsclause.com/.
+
+
+
+
+
+TELEGRAM: https://t.me/PrimeStealer
