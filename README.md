@@ -64,6 +64,7 @@
 3. First install reqiured packages by double clicking `install.bat` file
 4. Run the builder by double clicking the `builder.bat` file
 5. Follow instructions in builder and your exe will be found in the `dist` folder under the name `Primestealer.exe`
+
 ![image](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/eb1dd121-83aa-4e5f-95f0-8af727e6ef83)
 
 ![System Info](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/b31d4334-34b8-477f-9008-f5ccdf4b2751)
