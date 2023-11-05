@@ -1,3 +1,5 @@
+![Banner](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/ec2c9bcd-7fa5-4dbb-822d-a598fd68b731)
+
 ## Features
 
 -   Discord Information
