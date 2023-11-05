@@ -1,4 +1,4 @@
-https://github.com/SheLuvDx/PrimeStealer/assets/113944799/47d0226d-bd5b-483b-af9d-92b3e5381d93)
+https://github.com/SheLuvDx/PrimeStealer/assets/113944799/47d0226d-bd5b-483b-af9d-92b3e5381d93
 
 ## Features
 
