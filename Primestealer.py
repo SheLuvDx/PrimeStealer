@@ -1075,7 +1075,7 @@ def UP104D(name, link):
                     "color": color,
                     "footer": {
                         "text": "Prime Stealer | discord.gg/Prime",
-                        "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
+                        "icon_url": "https://media.discordapp.net/attachments/1142230938026258443/1183881629467422790/PRIME_LOGO.jpg?ex=6589f2af&is=65777daf&hm=7f0f5f9da35f0086a594b4ee413ba4c886d979e38caf819b1f1ae890d7d91b1b&=&format=webp&width=375&height=375"
                     }
                 }
             ],
@@ -1101,7 +1101,7 @@ def UP104D(name, link):
                     "color": color,
                     "footer": {
                         "text": "Prime Stealer | discord.gg/Prime",
-                        "icon_url": "https://media.discordapp.net/attachments/1077055672899870770/1105878341560586410/Picsart_23-05-10_18-25-19-907.png?width=484&height=484"
+                        "icon_url": "https://media.discordapp.net/attachments/1142230938026258443/1183881629467422790/PRIME_LOGO.jpg?ex=6589f2af&is=65777daf&hm=7f0f5f9da35f0086a594b4ee413ba4c886d979e38caf819b1f1ae890d7d91b1b&=&format=webp&width=375&height=375"
                     }
                 }
             ],
