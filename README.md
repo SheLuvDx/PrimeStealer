@@ -69,7 +69,7 @@
 
 ![System Info](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/423fbab0-170e-4328-bdfe-874d8fdc0bda)
 
-![roblox](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/fb21cb92-c130-4ec5-b42a-5d757affc3fd)
+![roblox](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/54d473cb-5860-4fe2-83dc-acb028d9e7a6)
 
 ![Passwords](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/bcd05f58-5248-4565-a8d7-86a48b29e8df)
 
