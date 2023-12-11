@@ -77,6 +77,9 @@
 
 ![Cookies](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/33470e25-5c80-4467-b9c2-bee6fb6528b5)
 
+JOIN TELEGRAM: https://t.me/PrimeStealer
+
+
 
 ## Disclaimer:
 
