@@ -1,4 +1,4 @@
 @echo off
-title Prime Builder
-python builder.py
+title PRIMESTEALER
+python builder.pyw
 pause
