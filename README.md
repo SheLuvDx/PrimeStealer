@@ -65,6 +65,8 @@
 4. Run the builder by double clicking the `builder.bat` file
 5. Follow instructions in builder and your exe will be found in the `dist` folder under the name `Primestealer.exe`
 
+![image](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/db2f6b30-21f6-4af1-9a62-f1ffa741d5e4)
+
 ![image](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/e1278013-dee4-4f92-abae-703a47f9fa71)
 
 ![System Info](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/144ae129-46fe-44fb-bb31-e2dd7df898c2)
