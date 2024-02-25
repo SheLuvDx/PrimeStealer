@@ -1,4 +1,16 @@
 ![Banner](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/a4985907-ae00-4a82-a05e-d3f4e8813350)
+
+<p align="center">
+    <img src="https://img.shields.io/github/stars/SheLuvDx/PrimeStealer?color=%23000000&logoColor=%23000000">
+    <img src="https://img.shields.io/github/forks/SheLuvDx/PrimeStealer?color=%23000000"> 
+    <br>
+    <img src="https://img.shields.io/github/languages/top/SheLuvDx/PrimeStealer?color=%23000000">
+    <img src="https://img.shields.io/github/last-commit/SheLuvDx/PrimeStealer?color=%23000000&logoColor=%23000000">
+    <br>
+    <img src="https://img.shields.io/github/issues/SheLuvDx/PrimeStealer?color=%23000000&logoColor=%23000000">
+    <img src="https://img.shields.io/github/issues-closed/SheLuvDx/BLX-PrimeStealer?color=%23000000&logoColor=%23000000">
+    <br>
+
 ## Features
 
 -   Discord Information
