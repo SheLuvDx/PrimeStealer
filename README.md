@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/github/last-commit/SheLuvDx/PrimeStealer?color=%23000000&logoColor=%23000000">
     <br>
     <img src="https://img.shields.io/github/issues/SheLuvDx/PrimeStealer?color=%23000000&logoColor=%23000000">
-    <img src="https://img.shields.io/github/issues-closed/SheLuvDx/BLX-PrimeStealer?color=%23000000&logoColor=%23000000">
+    <img src="https://img.shields.io/github/issues-open/SheLuvDx/BLX-PrimeStealer?color=%23000000&logoColor=%23000000">
     <br>
 
 ## Features
