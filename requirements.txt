@@ -14,4 +14,4 @@ ctypes
 psutil
 getmac
 get-mac
-OpenSS
+OpenSSL
