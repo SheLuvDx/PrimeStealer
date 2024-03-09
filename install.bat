@@ -12,6 +12,6 @@ pip install psutil
 pip install ctypes
 pip install Crypto.Cipher
 pip install fade
-pip install discord
+pip install discor
 pip install browser_cookie3
 pip install discord_webhook
