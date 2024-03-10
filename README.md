@@ -89,6 +89,8 @@
 
 ![Cookies](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/1f1c788c-9ae8-4dac-a4ce-faa4e9f7b20d)
 
+![Token](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/74326174-4b48-4682-b0fd-49338a471415)
+
 JOIN TELEGRAM: https://t.me/PrimeStealer
 
 
