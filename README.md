@@ -79,15 +79,15 @@
 
 ![image](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/4be7ed02-6a45-4f63-90c4-1513ddb5fef8)
 
-![System Info](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/3f401f2e-fc80-4308-b714-12adc674bff8)
+![System Info](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/315f46c9-8fce-48bf-ab66-7ef772dade3f)
 
-![Roblox](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/2204a65d-322b-494d-87dd-61f4ea834d36)
+![Roblox](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/5781b44f-cb08-43b3-84d1-f08a3cdaef06)
 
-![Passwords](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/7f2ec98b-d3e9-4d20-9f50-32f17036e66c)
+![Passwords](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/f53aaf6e-0f66-4108-bf43-478669e616b9)
 
-![Files](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/e4a9d32e-5b73-4249-9381-2a1246f193a5)
+![Files](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/c01a569e-7772-4132-9001-2b5df8bc9b51)
 
-![Cookies](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/b14c9100-2e15-403b-b12c-0baba6b1df7c)
+![Cookies](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/1f1c788c-9ae8-4dac-a4ce-faa4e9f7b20d)
 
 JOIN TELEGRAM: https://t.me/PrimeStealer
 
