@@ -1,4 +1,4 @@
-![Banner]([https://github.com/SheLuvDx/PrimeStealer/assets/113944799/a4985907-ae00-4a82-a05e-d3f4e8813350](https://github-production-user-asset-6210df.s3.amazonaws.com/113944799/311483223-d306833c-e7d7-4453-a386-a1f5e4bf45d8.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240310%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240310T042537Z&X-Amz-Expires=300&X-Amz-Signature=01cba0f3a71345521a2d009aaa8ca82c9a2f3cfe7ab5ae7d3226e5e2de98f44f&X-Amz-SignedHeaders=host&actor_id=113944799&key_id=0&repo_id=714792191))
+![Banner](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/d306833c-e7d7-4453-a386-a1f5e4bf45d8)
 
 <p align="center">
     <img src="https://img.shields.io/github/stars/SheLuvDx/PrimeStealer?color=%23000000&logoColor=%23000000">
