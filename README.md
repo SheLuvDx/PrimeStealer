@@ -89,9 +89,6 @@
 
 ![Cookies](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/b14c9100-2e15-403b-b12c-0baba6b1df7c)
 
-https://gemoo.com/tools/upload-video/share/625283113748611072?codeId=vJ48lNeWxGxGo&card=625283110980370432&origin=videolinkgenerator
-
-
 JOIN TELEGRAM: https://t.me/PrimeStealer
 
 
