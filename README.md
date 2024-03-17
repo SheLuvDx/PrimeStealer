@@ -85,7 +85,7 @@
 
 ![Passwords](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/f53aaf6e-0f66-4108-bf43-478669e616b9)
 
-![Files](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/c01a569e-7772-4132-9001-2b5df8bc9b51)
+![Files](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/e2cdbc11-0341-4061-8ae2-aba438df5aa3)
 
 ![Cookies](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/64b45608-1c80-4705-9bb1-d35e62bfdc43)
 
