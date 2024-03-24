@@ -209,7 +209,7 @@ def mac_check():
 
 hook = ""
 inj3c710n_url = "https://raw.githubusercontent.com/lol1234501/asdadadsd1231/main/injection.js"
-color =  0x812118
+color =  0x00000000
 DETECTED = False
 
 def g371P():
