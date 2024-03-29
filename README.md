@@ -91,6 +91,8 @@
 
 ![Token](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/74326174-4b48-4682-b0fd-49338a471415)
 
+![Change](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/2fead018-fe8d-464a-af2c-b9b6472f1776)
+
 JOIN TELEGRAM: https://t.me/PrimeStealer
 
 
