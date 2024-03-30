@@ -74,7 +74,7 @@ def build_exe():
         messagebox.showerror("Error", "Invalid webhook URL!")
 
 
-label = ctk.CTkLabel(master=app, text="Prime Stealer", text_color=("white"), font=("Comic Sans MS", 20, "bold")
+label = ctk.CTkLabel(master=app, text="Prime Stealer", text_color=("white"), font=("Helvetica", 26))
 label.place(relx=0.5, rely=0.2, anchor=ctk.CENTER)
 
 entry = ctk.CTkEntry(master=app, width=230, height=30, placeholder_text="Enter your webhook")
