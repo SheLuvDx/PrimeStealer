@@ -93,7 +93,7 @@
 
 ![Change](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/2fead018-fe8d-464a-af2c-b9b6472f1776)
 
-![Zips](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/74463ddc-23c2-4360-88bb-1dba565279cf)
+![Zips](https://github.com/SheLuvDx/PrimeStealer/assets/113944799/60e122c5-7352-44fd-9051-f5562d0956ce)
 
 JOIN TELEGRAM: https://t.me/PrimeStealer
 
