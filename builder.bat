@@ -1,4 +1,4 @@
 @echo off
-title PRIMESTEALER
+title PrimeStealer
 python builder.pyw
 pause
