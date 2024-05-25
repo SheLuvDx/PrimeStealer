@@ -6,7 +6,7 @@ import customtkinter as ctk
 from tkinter import messagebox, filedialog
 
 ctk.set_appearance_mode("dark")
-app = ctk.CTk()"img\\prime.ico")
+app = ctk.CTk()"img\\prime.ico"
 app.iconbitmap("img\\prime.ico")
 app.geometry("580x300")
 app.resizable(False, False)
