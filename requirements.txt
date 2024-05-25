@@ -15,4 +15,3 @@ psutil
 getmac
 get-mac
 OpenSSL
-customtkinter
