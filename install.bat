@@ -15,4 +15,3 @@ pip install fade
 pip install discord
 pip install browser_cookie3
 pip install discord_webhook
-pip3 install customtkinter --upgrad
