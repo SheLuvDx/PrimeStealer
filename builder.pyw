@@ -2,7 +2,6 @@ import os
 import shutil
 import requests
 import subprocess
-import customtkinter
 import customtkinter as ctk
 from tkinter import messagebox, filedialog
 
