@@ -37,7 +37,6 @@ import subprocess
 import uuid
 import socket
 import getpass
-from PIL import Image, ImageGrab
 def user_check():
         USERS = [
             "Primelus",
