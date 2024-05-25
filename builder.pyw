@@ -3,7 +3,7 @@ import shutil
 import requests
 import subprocess
 import customtkinter
-import custontkinter as ctk
+import customtkinter as ctk
 from tkinter import messagebox, filedialog
 
 ctk.set_appearance_mode("dark")
